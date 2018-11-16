@@ -80,33 +80,19 @@
     }
 }
 
-
-li {
-    @include font-size(16px);
-    @media screen and (min-width: $lg) {
-        @include font-size(18px);
+.link {
+    color: $dark;
+    font-family: $font-stack;
+    font-weight: $bold;
+    @include font-size(17px);
+    @include line-height(27px);
+    &:active {
+        color: $accentDark;
     }
-}
-
-figcaption {
-    display: block;
-    padding: 0.875em 0 0 0;
-    text-align: right;
-    @include font-size(12px);
-    @include line-height(20px);
-    @media screen and (min-width: $med) {
-        @include font-size(14px);
+    &:focus {
+        color: $accent;
     }
-}
-
-a {
-    font-family: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    text-decoration: none;
-    color: inherit;
     &:hover {
-        text-decoration: underline;
-        color: inherit;
+        color: $accent;
     }
 }
