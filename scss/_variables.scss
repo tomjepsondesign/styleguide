@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+$font-stack: 'PT Sans', sans-serif;
+
+$primary: #007CBF;
+$primaryDark: darken($primary, 35%);
+$accent: #D13250;
+$accentDark: darken($accent, 35%);
+$positive: #00843D;
+$negative: #BF0915;
+$negativeDark: darken($negative, 35%);
+$dark: #14191C;
+$dark55: rgba($dark, 0.55);
+$dark35: rgba($dark, 0.35);
+$dark25: rgba($dark, 0.25);
+$dark15: rgba($dark, 0.15);
+$dark5: rgba($dark, 0.05);
+$dark1: rgba($dark, 0.01);
+$white: #ffffff;
+
+
+$sm: 320px;
+$med: 48em; /* 768px; */
+$lg: 73.125em; /* 1170px */
+
+$regular: 400;
+$bold: 700;

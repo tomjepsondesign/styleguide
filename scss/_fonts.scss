@@ -1,0 +1,112 @@
+.large-heading {
+    font-weight: $regular;
+    @include font-size(39px);
+    @include line-height(59px);
+    @media screen and (min-width: $med) {
+        @include font-size(39px);
+        @include line-height(59px);
+    }
+    @media screen and (min-width: $lg) {
+        @include font-size(39px);
+        @include line-height(59px);
+    }
+}
+
+.content-heading {
+    @include font-size(21px);
+    @include line-height(31px);
+    font-weight: $bold;
+    @media screen and (min-width: $med) {
+        @include font-size(21px);
+        @include line-height(31px);
+    }
+}
+
+.copy { 
+    //display: block;
+    //padding-bottom: 1.25em;
+    font-weight: $regular;
+    @include font-size(17px);
+    @include line-height(27px);
+    @media screen and (min-width: $lg) {
+        @include font-size(17px);
+        @include line-height(27px);
+    }
+    // &:last-of-type {
+    //     padding-bottom: 0;
+    // }
+}
+
+.accent { 
+    //display: block;
+    //padding-bottom: 1.25em;
+    font-weight: $bold;
+
+    @include font-size(17px);
+    @include line-height(27px);
+    @media screen and (min-width: $lg) {
+        @include font-size(17px);
+        @include line-height(27px);
+    }
+
+    &--reverse {
+        color: $white;
+    }
+
+    &--colour {
+        color: $primary;
+    }    
+}
+
+.sub-copy {
+    color: $dark55;
+    font-weight: $regular;
+    @include font-size(15px);
+    @include line-height(22px);
+    @media screen and (min-width: $lg) {
+        @include font-size(15px);
+        @include line-height(22px);
+    }
+}
+
+.error-copy {
+    color: $negative;
+    font-weight: $regular;
+    @include font-size(15px);
+    @include line-height(22px);
+    @media screen and (min-width: $lg) {
+        @include font-size(15px);
+        @include line-height(22px);
+    }
+}
+
+
+li {
+    @include font-size(16px);
+    @media screen and (min-width: $lg) {
+        @include font-size(18px);
+    }
+}
+
+figcaption {
+    display: block;
+    padding: 0.875em 0 0 0;
+    text-align: right;
+    @include font-size(12px);
+    @include line-height(20px);
+    @media screen and (min-width: $med) {
+        @include font-size(14px);
+    }
+}
+
+a {
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        text-decoration: underline;
+        color: inherit;
+    }
+}

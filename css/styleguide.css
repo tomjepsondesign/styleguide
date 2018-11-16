@@ -1,0 +1,242 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* 768px; */
+/* 1170px */
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 100%;
+  line-height: 100%;
+  color: #14191C;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.large-heading {
+  font-weight: 400;
+  font-size: 39px;
+  font-size: 2.4375rem;
+  line-height: 59px;
+  line-height: 3.6875rem;
+}
+@media screen and (min-width: 48em) {
+  .large-heading {
+    font-size: 39px;
+    font-size: 2.4375rem;
+    line-height: 59px;
+    line-height: 3.6875rem;
+  }
+}
+@media screen and (min-width: 73.125em) {
+  .large-heading {
+    font-size: 39px;
+    font-size: 2.4375rem;
+    line-height: 59px;
+    line-height: 3.6875rem;
+  }
+}
+
+.content-heading {
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 31px;
+  line-height: 1.9375rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 48em) {
+  .content-heading {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 31px;
+    line-height: 1.9375rem;
+  }
+}
+
+.copy {
+  font-weight: 400;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 27px;
+  line-height: 1.6875rem;
+}
+@media screen and (min-width: 73.125em) {
+  .copy {
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 27px;
+    line-height: 1.6875rem;
+  }
+}
+
+.accent {
+  font-weight: 700;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 27px;
+  line-height: 1.6875rem;
+}
+@media screen and (min-width: 73.125em) {
+  .accent {
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 27px;
+    line-height: 1.6875rem;
+  }
+}
+.accent--reverse {
+  color: #ffffff;
+}
+.accent--colour {
+  color: #007CBF;
+}
+
+.sub-copy {
+  color: rgba(20, 25, 28, 0.55);
+  font-weight: 400;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 22px;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 73.125em) {
+  .sub-copy {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+}
+
+.error-copy {
+  color: #BF0915;
+  font-weight: 400;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 22px;
+  line-height: 1.375rem;
+}
+@media screen and (min-width: 73.125em) {
+  .error-copy {
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 22px;
+    line-height: 1.375rem;
+  }
+}
+
+li {
+  font-size: 16px;
+  font-size: 1rem;
+}
+@media screen and (min-width: 73.125em) {
+  li {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+figcaption {
+  display: block;
+  padding: 0.875em 0 0 0;
+  text-align: right;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+}
+@media screen and (min-width: 48em) {
+  figcaption {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+a {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+
+/*# sourceMappingURL=styleguide.css.map */
