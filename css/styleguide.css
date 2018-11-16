@@ -174,9 +174,12 @@ img {
   font-size: 1.0625rem;
   line-height: 27px;
   line-height: 1.6875rem; }
-  .link:active {
-    color: #420f18; }
   .link:focus {
     color: #D13250; }
   .link:hover {
     color: #D13250; }
+  .link:active {
+    color: #952137; }
+
+.primary-bg {
+  background-color: #007CBF; }

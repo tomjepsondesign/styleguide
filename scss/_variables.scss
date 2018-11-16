@@ -1,13 +1,19 @@
+//Typography
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
 $font-stack: 'PT Sans', sans-serif;
 
+//Typography Helpers
+$regular: 400;
+$bold: 700;
+
+// Colour
 $primary: #007CBF;
-$primaryDark: darken($primary, 35%);
+$primaryDark: darken($primary, 15%);
 $accent: #D13250;
-$accentDark: darken($accent, 35%);
+$accentDark: darken($accent, 15%);
 $positive: #00843D;
 $negative: #BF0915;
-$negativeDark: darken($negative, 35%);
+$negativeDark: darken($negative, 15%);
 $dark: #14191C;
 $dark55: rgba($dark, 0.55);
 $dark35: rgba($dark, 0.35);
@@ -17,10 +23,8 @@ $dark5: rgba($dark, 0.05);
 $dark1: rgba($dark, 0.01);
 $white: #ffffff;
 
-
+// Breakpoints
 $sm: 320px;
 $med: 48em; /* 768px; */
 $lg: 73.125em; /* 1170px */
 
-$regular: 400;
-$bold: 700;

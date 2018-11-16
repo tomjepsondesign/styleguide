@@ -86,13 +86,13 @@
     font-weight: $bold;
     @include font-size(17px);
     @include line-height(27px);
-    &:active {
-        color: $accentDark;
-    }
     &:focus {
         color: $accent;
     }
     &:hover {
         color: $accent;
     }
+    &:active {
+        color: $accentDark;
+    }    
 }
