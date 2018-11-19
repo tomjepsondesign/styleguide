@@ -99,6 +99,11 @@
 
 //grid-layout.html
 
+// What's the method?
+// i. Element layouts per template; standard element classes appended
+// ii. Standard grid with layout-defined elements
+// iii. No layout in elements; helper classes applied ala Bootstrap
+
 .grid-container {
     display: grid;
     grid-column-gap: 20px;
@@ -118,6 +123,7 @@
 }
 
 .grid-action {
+    align-self: center;
     grid-column: span 2;
     justify-self: end;
 }
