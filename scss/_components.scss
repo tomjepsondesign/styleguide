@@ -96,3 +96,48 @@
         border: solid 1px $dark15;   
     }                               
 }
+
+//grid-layout.html
+
+.grid-container {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(auto-fit);
+    margin: 0 auto;
+    max-width: 75em;
+}
+
+.grid-breadcrumb {
+    grid-column: span 12;
+}
+
+.grid-heading {
+    grid-column: span 10;
+}
+
+.grid-action {
+    grid-column: span 2;
+    justify-self: end;
+}
+
+.grid-panel {
+    background-color: $dark15;
+    grid-column: span 4;
+}
+
+.grid-chart {
+    grid-column: span 6;
+}
+
+// reusable elements
+
+.empty-state {
+    background-color: $dark35;
+    justify-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
