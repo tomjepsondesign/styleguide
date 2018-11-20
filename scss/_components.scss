@@ -1,144 +1,76 @@
-.primary-bg {
-    background-color: $primary;
-}
+@import "elements/buttons";
+@import "elements/navigation";
+@import "elements/panels";
 
-//CSS Grid for Colour Swatch Layout
+// Wrapper for all main-page content areas
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(4, 100px);
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-}
-
-.colour-item {
-    &__1 {
-        background-color: $primary;
-        grid-column-start: 1;
-        grid-row-start: 1;        
-        grid-column-end: 2;
-        grid-row-end: 2;        
-    }
-    &__2 {
-        background-color: $primaryDark;
-        grid-column-start: 1;
-        grid-row-start: 2;        
-        grid-column-end: 2;
-        grid-row-end: 3;           
-    }
-    &__3 {
-        background-color: $accent;
-        grid-column-start: 2;
-        grid-row-start: 1;        
-        grid-column-end: 3;
-        grid-row-end: 2;          
-    }
-    &__4 {
-        background-color: $accentDark;
-        grid-column-start: 2;
-        grid-row-start: 2;        
-        grid-column-end: 3;
-        grid-row-end: 3;          
-    }
-    &__5 {
-        background-color: $negative;
-        grid-column-start: 3;
-        grid-row-start: 1;        
-        grid-column-end: 4;
-        grid-row-end: 2;          
-    }
-    &__6 {
-        background-color: $negativeDark;
-        grid-column-start: 3;
-        grid-row-start: 2;        
-        grid-column-end: 4;
-        grid-row-end: 3;          
-    }
-    &__7 {
-        background-color: $positive;
-        grid-column-start: 4;
-        grid-row-start: 1;        
-        grid-column-end: 5;
-        grid-row-end: 2;          
-    }
-    &__8 {
-        background-color: $positiveDark;
-        grid-column-start: 4;
-        grid-row-start: 2;        
-        grid-column-end: 5;
-        grid-row-end: 3;          
-    }
-    &__9 {
-        background-color: $dark;       
-    }
-    &__10 {
-        background-color: $dark55;       
-    }
-    &__11 {
-        background-color: $dark35;       
-    }
-    &__12 {
-        background-color: $dark25;       
-    }
-    &__13 {
-        background-color: $dark15;       
-    }
-    &__14 {
-        background-color: $dark5;       
-    }
-    &__15 {
-        background-color: $dark1;       
-        border: solid 1px $dark15;
-    }
-    &__16 {
-        background-color: $white;
-        border: solid 1px $dark15;   
-    }                               
-}
-
-//grid-layout.html
-
-// What's the method?
-// i. Element layouts per template; standard element classes appended
-// ii. Standard grid with layout-defined elements
-// iii. No layout in elements; helper classes applied ala Bootstrap
-
-.grid-container {
+.wrapper {
     display: grid;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(auto-fit);
-    margin: 0 auto;
-    max-width: 75em;
+    &--outer {
+        margin: 0 auto;
+        max-width: $lg;
+    }
+    &--inner {
+        grid-column: span 12;
+    }
 }
 
-.grid-breadcrumb {
-    grid-column: span 12;
+// Standard areas for all pages
+
+// .page-header is a nested wrapper to sit within a .wrapper <div>
+.page-header {
+    display: grid;
+    grid-column: span 12; // Full width of .wrapper
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "breadcrumb breadcrummb"
+        "heading action";
 }
 
-.grid-heading {
-    grid-column: span 10;
+.page-breadcrumb {
+    grid-area: breadcrumb;
+    padding: 0.84375rem 0 0.84375rem 0;
+    &__list {
+        display: flex;
+        flex-direction: row;
+    }
+    &__item {
+        flex: 0 1 auto;
+    }
+    &__separator {
+        color: $dark35;
+        font-size: 0.875rem;
+        line-height: 1.6875rem;
+        padding: 0 0.4375rem 0 0.5rem;
+    }
 }
 
-.grid-action {
+.page-heading {
+    grid-area: heading;
+}
+
+.page-action {
     align-self: center;
-    grid-column: span 2;
+    grid-area: action;
     justify-self: end;
 }
 
-.grid-panel {
-    background-color: $dark15;
-    grid-column: span 4;
-}
+// Elements
 
-.grid-chart {
+.content-chart {
     grid-column: span 6;
 }
 
-// reusable elements
+.content-table {
+    grid-column: span 12;
+}
 
+// Placement class for content shown when there is no data available
 .empty-state {
     background-color: $dark35;
     justify-self: center;

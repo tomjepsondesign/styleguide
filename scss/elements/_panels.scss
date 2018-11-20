@@ -1,0 +1,15 @@
+.content-panel {
+    background-color: $dark15;
+    &--sm {
+        grid-column: span 3;
+    }
+    &--md {
+        grid-column: span 4;
+    }
+    &--lg {
+        grid-column: span 5;
+    }
+    &--full {
+        grid-column: span 12;
+    }
+}
