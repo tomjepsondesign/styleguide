@@ -1,9 +1,10 @@
 .button {
+    display: inline-block;
     box-sizing: border-box;
     border-radius: 2px;
     font-weight: $bold;
     min-width: 120px;
-    padding: 17px 20px 15px 20px;
+    padding: 11px 20px 9px 20px;
     text-decoration: none;
     @include font-size(17px);
     @include line-height(17px);
@@ -12,9 +13,12 @@
         background-color: $primary;
         border: 2px solid $primary;
         color: $white;
-        transition: background-color 0.1s ease-in-out;
+        transition:
+            background-color 0.1s ease-in-out,
+            border-color 0.1s ease-in-out;
         &:hover {
             background-color: $primaryDark;
+            border-color: $primaryDark;
         }
     }
 

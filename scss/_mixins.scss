@@ -19,3 +19,30 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
+@mixin standard-font { 
+  font-weight: $regular;
+  @include font-size(17px);
+  @include line-height(27px);
+  @media screen and (min-width: $lg) {
+      @include font-size(17px);
+      @include line-height(27px);
+  }
+}
+
+@mixin table-link {
+    color: $dark;
+    font-family: $font-stack;
+    font-weight: $regular;
+    @include font-size(17px);
+    @include line-height(27px);
+    &:focus {
+        color: $accent;
+    }
+    &:hover {
+        color: $accent;
+    }
+    &:active {
+        color: $accentDark;
+    }      
+}

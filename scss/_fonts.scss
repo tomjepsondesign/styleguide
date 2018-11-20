@@ -23,18 +23,7 @@
 }
 
 .copy { 
-    //display: block;
-    //padding-bottom: 1.25em;
-    font-weight: $regular;
-    @include font-size(17px);
-    @include line-height(27px);
-    @media screen and (min-width: $lg) {
-        @include font-size(17px);
-        @include line-height(27px);
-    }
-    // &:last-of-type {
-    //     padding-bottom: 0;
-    // }
+    @include standard-font;
 }
 
 .accent { 

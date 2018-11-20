@@ -1,6 +1,7 @@
 @import "elements/buttons";
 @import "elements/navigation";
 @import "elements/panels";
+@import "elements/tables";
 
 // Wrapper for all main-page content areas
 
@@ -12,7 +13,17 @@
     grid-template-rows: repeat(auto-fit);
     &--outer {
         margin: 0 auto;
-        max-width: $lg;
+        width: 100%;
+        @media screen and (min-width: 788px) {
+            max-width: $med;  
+        }
+        @media screen and (min-width: 980px) {
+            max-width: 960px;
+        }        
+        @media screen and (min-width: 1220px) {
+            max-width: $lg;    
+        }                
+        padding-bottom: 40px;
     }
     &--inner {
         grid-column: span 12;
@@ -25,16 +36,17 @@
 .page-header {
     display: grid;
     grid-column: span 12; // Full width of .wrapper
-    grid-template-columns: 5fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
         "breadcrumb breadcrummb"
         "heading action";
+    margin-bottom: 20px;
 }
 
 .page-breadcrumb {
     grid-area: breadcrumb;
-    padding: 0.84375rem 0 0.84375rem 0;
+    margin-bottom: 40px;
     &__list {
         display: flex;
         flex-direction: row;
@@ -62,20 +74,21 @@
 
 // Elements
 
-.content-chart {
+// A half-width container for content
+.content-half {
     grid-column: span 6;
 }
 
-.content-table {
+// A full-width container for content
+.content-full {
     grid-column: span 12;
 }
 
 // Placement class for content shown when there is no data available
 .empty-state {
     background-color: $dark35;
+    grid-column: span 12;
+    grid-row: span 15;
     justify-self: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    align-self: center;
 }

@@ -1,0 +1,26 @@
+.data-table {
+    width: 100%;
+    text-align: left;
+    tr {
+        @include standard-font;
+        &:nth-of-type(even) {
+            background-color: $dark5;
+        }
+        &:nth-of-type(odd) {
+            background-color: $dark10;
+        }
+        &:first-of-type {
+            background-color: $primary;
+            color: $white;
+            font-weight: $bold;
+        }                
+    }
+
+    th, td {
+        padding: 8px 0 7px 10px;
+    }
+
+    a {
+        @include table-link;
+    }
+}

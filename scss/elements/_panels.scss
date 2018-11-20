@@ -1,14 +1,28 @@
+.panel-style {
+    background-color: $white;
+    border: 1px solid $dark15;
+    border-radius: 4px;
+    box-sizing: border-box;
+    line-height: 0;
+    &--shadow {
+        box-shadow: 0 7px 14px 0 $dark10;
+    }
+}
+
 .content-panel {
-    background-color: $dark15;
-    &--sm {
+    padding: 20px;
+    &--xs {
         grid-column: span 3;
     }
-    &--md {
+    &--sm {
         grid-column: span 4;
     }
-    &--lg {
+    &--md {
         grid-column: span 5;
     }
+    &--lg {
+        grid-column: span 6;
+    }    
     &--full {
         grid-column: span 12;
     }
