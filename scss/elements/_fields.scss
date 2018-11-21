@@ -1,0 +1,47 @@
+
+.form {
+    display: flex;
+    flex-direction: column;
+    &-std {
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;        
+    }
+    &-ctr {
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 75%;
+    }
+}
+
+.form-field {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        margin-bottom: 10px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+    &__label {
+        @include standard-font;
+        flex: 1 1 auto;
+        text-align: left;
+    }
+
+    &__input {
+        @include standard-font;
+        background-color: $white;
+        border: 1px solid $dark35;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: $dark55;
+        flex: 1 1 auto;
+        height: 42px;
+        padding: 0 0 0 10px;
+        &:focus {
+            border: 2px solid $primary;
+        }
+    }
+}

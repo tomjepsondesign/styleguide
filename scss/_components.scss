@@ -2,6 +2,7 @@
 @import "elements/navigation";
 @import "elements/panels";
 @import "elements/tables";
+@import "elements/fields";
 
 // Wrapper for all main-page content areas
 
@@ -82,13 +83,4 @@
 // A full-width container for content
 .content-full {
     grid-column: span 12;
-}
-
-// Placement class for content shown when there is no data available
-.empty-state {
-    background-color: $dark35;
-    grid-column: span 12;
-    grid-row: span 15;
-    justify-self: center;
-    align-self: center;
 }
