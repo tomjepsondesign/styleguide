@@ -30,3 +30,23 @@
         grid-column: span 12;
     }
 }
+
+.lightbox {
+    position: absolute;
+    padding: 30px;
+    margin: 0 auto;
+    width: 45%;
+    background-color: $white;
+    border: 1px solid $dark15;
+    border-radius: 4px;
+    box-sizing: border-box;
+    line-height: 0;
+    text-align: center;  
+    box-shadow: 0 7px 14px 0 $dark10;
+    &__heading {
+        margin-bottom: 10px;
+    }
+    &__content {
+        margin-bottom: 20px;
+    }
+}
