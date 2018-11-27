@@ -20,25 +20,25 @@
         border: 1px solid transparent;
 
         &:before {
-            font-family: fontawesome;
-            font-weight: normal;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
             margin-right: 10px;
         }
 
         &[for*='1']:before {
-            content: '\f1cb';
+            content: '\f107';
         }
 
         &[for*='2']:before {
-            content: '\f17d';
+            content: '\f107';
         }
 
         &[for*='3']:before {
-            content: '\f16c';
+            content: '\f107';
         }
 
         &[for*='4']:before {
-            content: '\f171';
+            content: '\f107';
         }
         
         &:hover {
