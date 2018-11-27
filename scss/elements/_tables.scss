@@ -1,19 +1,23 @@
 .data-table {
     width: 100%;
     text-align: left;
-    tr {
+
+    //Header Style
+    thead > tr, > tr:first-of-type {
+        background-color: $primary;
+        color: $white;
+        font-weight: $bold;
+    }   
+
+    //Row Styles
+    tbody > tr, >tr {
         @include standard-font;
         &:nth-of-type(even) {
             background-color: $dark5;
         }
         &:nth-of-type(odd) {
             background-color: $dark10;
-        }
-        &:first-of-type {
-            background-color: $primary;
-            color: $white;
-            font-weight: $bold;
-        }                
+        }                   
     }
 
     th, td {
