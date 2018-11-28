@@ -4,7 +4,6 @@
     box-shadow: 0 7px 14px 0 $dark10;
     box-sizing: border-box;
     display: flex;
-    margin-bottom: 20px;
     padding: 10px;
     position: sticky;
     top: 0;
@@ -29,6 +28,65 @@
         a {            
             color: $dark;
             flex: 0 1 auto;
+            text-decoration: none;
+            padding: 12px 12px;
+            transition:
+                background-color 0.1s ease-in-out;            
+                @include font-size(15px);
+                @include line-height(15px);
+            &:hover {
+                background-color: $primary;
+                border-radius: 2px;
+                color: $white;
+            }
+            &:active {
+                background-color: $primaryDark;
+                border-radius: 2px;
+                color: $white;
+            }            
+        }
+
+        &--active a {
+            background-color: rgba($primary, 0.15);
+            border-radius: 2px;
+            color: $primary;
+            font-weight: $bold;
+        }
+    }
+}
+
+.sidebar {
+    background-color: $white;
+    border-right: 1px solid $dark35;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 70px 10px 10px 10px;
+    position: relative;
+    top: -60px;
+    width: 300px;
+
+    &__divider {
+        background-color: $dark15;
+        flex: 0 0 auto;
+        height: 1px;
+        margin: 10px 0;
+    }
+
+    &__items {
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        flex: 0 1 auto;
+
+        a {            
+            color: $dark;
+            flex: 1 1 auto;
             text-decoration: none;
             padding: 12px 12px;
             transition:

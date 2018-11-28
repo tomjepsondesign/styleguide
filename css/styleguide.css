@@ -382,7 +382,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 20px;
   padding: 10px;
   position: -webkit-sticky;
   position: sticky;
@@ -440,6 +439,83 @@ img {
   color: #ffffff;
 }
 .top-navigation__item--active a {
+  background-color: rgba(0, 124, 191, 0.15);
+  border-radius: 2px;
+  color: #007CBF;
+  font-weight: 700;
+}
+
+.sidebar {
+  background-color: #ffffff;
+  border-right: 1px solid rgba(20, 25, 28, 0.35);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  padding: 70px 10px 10px 10px;
+  position: relative;
+  top: -60px;
+  width: 300px;
+}
+.sidebar__divider {
+  background-color: rgba(20, 25, 28, 0.15);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  height: 1px;
+  margin: 10px 0;
+}
+.sidebar__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sidebar__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+.sidebar__item a {
+  color: #14191C;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-decoration: none;
+  padding: 12px 12px;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 15px;
+  line-height: 0.9375rem;
+}
+.sidebar__item a:hover {
+  background-color: #007CBF;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.sidebar__item a:active {
+  background-color: #004a73;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.sidebar__item--active a {
   background-color: rgba(0, 124, 191, 0.15);
   border-radius: 2px;
   color: #007CBF;
