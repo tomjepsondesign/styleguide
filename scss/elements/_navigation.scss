@@ -56,15 +56,18 @@
 }
 
 .sidebar {
+    grid-area: sidebar;
+
     background-color: $white;
     border-right: 1px solid $dark35;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 70px 10px 10px 10px;
-    position: relative;
-    top: -60px;
+    padding: 10px 10px 10px 10px;
+    //position: relative;
+    //top: -60px;
+    //left: 0%;
     width: 300px;
 
     &__divider {

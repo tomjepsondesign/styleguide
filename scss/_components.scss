@@ -5,6 +5,25 @@
 @import "elements/fields";
 @import "elements/tabs";
 
+// Sidebar layout
+
+.pageframe {
+    display: grid;
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "sidebar body";
+    height: 100%;
+}
+
+.pagecontent {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(auto-fit);
+    margin: 20px 20px 0 20px;
+}
+
 // Wrapper for all main-page content areas
 
 .wrapper {
