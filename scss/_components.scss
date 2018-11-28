@@ -6,24 +6,34 @@
 @import "elements/tabs";
 
 // Sidebar layout
+// |        Header          |
+// | Sidebar |    Content   |
 
+//Frame gives layout for the header + page
 .pageframe {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: auto;
     grid-template-rows: 60px auto;
     grid-template-areas:
-        "navigation navigation"
-        "sidebar body";
+        "navigation"
+        "content";
     height: 100%;
 }
 
+//Body gives layout for the sidebar + content
+.pagebody {
+    display: grid;    
+    grid-template-columns: 300px auto;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar" "ui";    
+    height: 100%;    
+}
+
+//Page Content used to position the actual content inside it's grid cell
 .pagecontent {
-    display: grid;
-    grid-area: body;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(auto-fit);
     margin: 20px 20px 0 20px;
 }
+
 
 // Wrapper for all main-page content areas
 
