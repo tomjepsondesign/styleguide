@@ -4,10 +4,11 @@
     box-shadow: 0 7px 14px 0 $dark10;
     box-sizing: border-box;
     display: flex;
+    grid-area: navigation;
     padding: 10px;
-    position: sticky;
-    top: 0;
-    left: 0;
+    //position: sticky;
+    //top: 0;
+    //left: 0;
     width: 100%;
     z-index: 999;
 
@@ -56,19 +57,15 @@
 }
 
 .sidebar {
-    grid-area: sidebar;
-
     background-color: $white;
     border-right: 1px solid $dark35;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    grid-area: sidebar;
     height: 100%;
     padding: 10px 10px 10px 10px;
-    //position: relative;
-    //top: -60px;
-    //left: 0%;
-    width: 300px;
+    //width: 300px;
 
     &__divider {
         background-color: $dark15;

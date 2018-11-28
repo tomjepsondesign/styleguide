@@ -386,11 +386,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  grid-area: navigation;
   padding: 10px;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
   width: 100%;
   z-index: 999;
 }
@@ -450,7 +447,6 @@ img {
 }
 
 .sidebar {
-  grid-area: sidebar;
   background-color: #ffffff;
   border-right: 1px solid rgba(20, 25, 28, 0.35);
   -webkit-box-sizing: border-box;
@@ -462,9 +458,9 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  grid-area: sidebar;
   height: 100%;
   padding: 10px 10px 10px 10px;
-  width: 300px;
 }
 .sidebar__divider {
   background-color: rgba(20, 25, 28, 0.15);
@@ -785,8 +781,8 @@ input:checked + label {
 .pageframe {
   display: grid;
   grid-template-columns: 300px auto;
-  grid-template-rows: auto;
-  grid-template-areas: "sidebar body";
+  grid-template-rows: 60px auto;
+  grid-template-areas: "navigation navigation" "sidebar body";
   height: 100%;
 }
 
