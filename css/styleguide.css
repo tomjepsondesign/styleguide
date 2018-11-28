@@ -372,16 +372,78 @@ img {
   border-color: #004a73;
 }
 
-.p-nav {
-  background-color: #14191C;
-  height: 60px;
+.top-navigation {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(20, 25, 28, 0.35);
+  -webkit-box-shadow: 0 7px 14px 0 rgba(20, 25, 28, 0.1);
+          box-shadow: 0 7px 14px 0 rgba(20, 25, 28, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 20px;
+  padding: 10px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
+}
+.top-navigation__logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.top-navigation__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.top-navigation__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+.top-navigation__item a {
+  color: #14191C;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  text-decoration: none;
+  padding: 12px 12px;
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 15px;
+  line-height: 0.9375rem;
+}
+.top-navigation__item a:hover {
+  background-color: #007CBF;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.top-navigation__item a:active {
+  background-color: #004a73;
+  border-radius: 2px;
+  color: #ffffff;
+}
+.top-navigation__item--active a {
+  background-color: rgba(0, 124, 191, 0.15);
+  border-radius: 2px;
+  color: #007CBF;
+  font-weight: 700;
 }
 
 .panel-style {
@@ -454,7 +516,12 @@ img {
   width: 100%;
   text-align: left;
 }
-.data-table tr {
+.data-table thead > tr, .data-table > tr:first-of-type {
+  background-color: #007CBF;
+  color: #ffffff;
+  font-weight: 700;
+}
+.data-table tbody > tr, .data-table > tr {
   font-weight: 400;
   font-size: 17px;
   font-size: 1.0625rem;
@@ -462,23 +529,18 @@ img {
   line-height: 1.6875rem;
 }
 @media screen and (min-width: 75em) {
-  .data-table tr {
+  .data-table tbody > tr, .data-table > tr {
     font-size: 17px;
     font-size: 1.0625rem;
     line-height: 27px;
     line-height: 1.6875rem;
   }
 }
-.data-table tr:nth-of-type(even) {
+.data-table tbody > tr:nth-of-type(even), .data-table > tr:nth-of-type(even) {
   background-color: rgba(20, 25, 28, 0.05);
 }
-.data-table tr:nth-of-type(odd) {
+.data-table tbody > tr:nth-of-type(odd), .data-table > tr:nth-of-type(odd) {
   background-color: rgba(20, 25, 28, 0.1);
-}
-.data-table tr:first-of-type {
-  background-color: #007CBF;
-  color: #ffffff;
-  font-weight: 700;
 }
 .data-table th, .data-table td {
   padding: 8px 0 7px 10px;

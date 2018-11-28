@@ -1,13 +1,57 @@
-// Primary Navigation
-// Placeholder until design is complete
-
-.p-nav {
-    background-color: $dark;
-    height: 60px;
+.top-navigation {
+    background-color: $white;
+    border-bottom: 1px solid $dark35;
+    box-shadow: 0 7px 14px 0 $dark10;
+    box-sizing: border-box;
+    display: flex;
     margin-bottom: 20px;
+    padding: 10px;
     position: sticky;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 999;
+
+    &__logo {
+        flex: 0 0 auto;
+    }
+
+    &__items {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        display: flex;
+        flex: 0 1 auto;
+
+        a {            
+            color: $dark;
+            flex: 0 1 auto;
+            text-decoration: none;
+            padding: 12px 12px;
+            transition:
+                background-color 0.1s ease-in-out;            
+                @include font-size(15px);
+                @include line-height(15px);
+            &:hover {
+                background-color: $primary;
+                border-radius: 2px;
+                color: $white;
+            }
+            &:active {
+                background-color: $primaryDark;
+                border-radius: 2px;
+                color: $white;
+            }            
+        }
+
+        &--active a {
+            background-color: rgba($primary, 0.15);
+            border-radius: 2px;
+            color: $primary;
+            font-weight: $bold;
+        }
+    }
 }
