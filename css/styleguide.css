@@ -54,6 +54,10 @@ table {
   border-spacing: 0;
 }
 
+router-outlet {
+  display: none;
+}
+
 .cf:before,
 .cf:after {
   content: " ";
@@ -386,7 +390,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-area: navigation;
+  grid-area: header;
   padding: 10px;
   width: 100%;
   z-index: 999;
@@ -780,17 +784,23 @@ input:checked + label {
 
 .pageframe {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: auto;
   grid-template-rows: 60px auto;
-  grid-template-areas: "navigation navigation" "sidebar body";
+  grid-template-areas: "header" "body";
+  height: 100%;
+}
+
+.pagebody {
+  display: grid;
+  grid-area: body;
+  grid-template-columns: 300px auto;
+  grid-template-rows: auto;
+  grid-template-areas: "sidebar content";
   height: 100%;
 }
 
 .pagecontent {
-  display: grid;
-  grid-area: body;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(auto-fit);
+  grid-area: content;
   margin: 20px 20px 0 20px;
 }
 
@@ -893,5 +903,3 @@ input:checked + label {
   -ms-grid-column-span: 12;
   grid-column: span 12;
 }
-
-/*# sourceMappingURL=styleguide.css.map */
