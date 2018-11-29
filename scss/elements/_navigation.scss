@@ -54,8 +54,8 @@
 }
 
 .sidebar {
-    background-color: $white;
-    border-right: 1px solid $dark35;
+    background-color: $dark5;
+    //border-right: 1px solid $dark35;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -81,7 +81,7 @@
         flex: 0 1 auto;
 
         a {            
-            color: $dark;
+            color: $dark55;
             flex: 1 1 auto;
             text-decoration: none;
             padding: 12px 12px;
