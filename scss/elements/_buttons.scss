@@ -1,3 +1,5 @@
+// need to add a class for when <button> is used instead of <a> - the padding renders differently
+
 .button {
     border-radius: 2px;
     box-sizing: border-box;
@@ -10,8 +12,11 @@
     @include line-height(17px);
 
     &--sm {
+        font-weight: $regular;
         min-width: auto;
         padding: 6px 10px 4px 10px;            
+        @include font-size(15px);
+        @include line-height(15px);
     }
 
     &--primary {

@@ -30,12 +30,7 @@
   }
 }
 
-@mixin table-link {
-    color: $dark;
-    font-family: $font-stack;
-    font-weight: $regular;
-    @include font-size(17px);
-    @include line-height(27px);
+@mixin link-states {
     &:focus {
         color: $accent;
     }

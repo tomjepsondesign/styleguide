@@ -75,13 +75,5 @@
     font-weight: $bold;
     @include font-size(17px);
     @include line-height(27px);
-    &:focus {
-        color: $accent;
-    }
-    &:hover {
-        color: $accent;
-    }
-    &:active {
-        color: $accentDark;
-    }    
+    @include link-states;
 }
