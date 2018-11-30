@@ -87,7 +87,12 @@
 
                 <div class="pagecontent">
 
-                    <div class="panel-style content-panel content-panel--sm">
+                    <div class="panel-style content-panel content-panel--md">
+                    
+                        <div *ngIf="status.error" class="panel-error">
+                            <p>Failed to retrieve the Application API Status</p>
+                        </div>
+                    
                         <h1 class="content-heading">Credentials</h1>
                         <ul>
                             <li><span class="accent">Subject ID</span> 000000</li>
@@ -95,7 +100,7 @@
                         </ul>
                     </div>
 
-                    <div class="panel-style content-panel content-panel--lg">
+                    <div class="panel-style content-panel content-panel--md">
                         <h1 class="content-heading">Fitbit Status</h1>
                         <ul>
                             <li><span class="accent">Authorisation</span> Not Authorised</li>

@@ -14,6 +14,25 @@
     }
 }
 
+.panel-error {
+    background-color: $negative;
+    border-radius: 2px;
+    color: $white;
+    margin-bottom: 10px;
+    padding: 7px;
+    position: relative;
+    @include font-size(15px);
+    @include line-height(15px);
+    &:after {
+        content: "\f057";
+        font-family: "FontAwesome";
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        @include font-size(17px);
+    }
+}
+
 .content-panel {
     padding: 20px;
     &--xs {

@@ -548,6 +548,28 @@ img {
   box-shadow: 0 7px 14px 0 rgba(20, 25, 28, 0.1);
 }
 
+.panel-error {
+  background-color: #BF0915;
+  border-radius: 2px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding: 7px;
+  position: relative;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 15px;
+  line-height: 0.9375rem;
+}
+.panel-error:after {
+  content: "\f057";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  font-size: 17px;
+  font-size: 1.0625rem;
+}
+
 .content-panel {
   padding: 20px;
 }
