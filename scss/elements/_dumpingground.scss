@@ -1,0 +1,28 @@
+.snippet {
+    background-color: $dark5;
+    border: 1px solid $dark25;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    padding: 6px 5px 4px 5px;
+
+    @at-root #{&}__copy {
+        color: $negative;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: $bold;
+    }
+}
+
+.styleguide {
+    &__heading {
+        margin-top: 40px;
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    &__content-grp {
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}

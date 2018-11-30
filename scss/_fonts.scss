@@ -26,20 +26,21 @@
     @include standard-font;
 }
 
-.accent { 
-    //display: block;
-    //padding-bottom: 1.25em;
+.accent {
+    @extend .copy;
     font-weight: $bold;
-
-    @include font-size(17px);
-    @include line-height(27px);
+    // @include font-size(17px);
+    // @include line-height(27px);
     @media screen and (min-width: $lg) {
-        @include font-size(17px);
-        @include line-height(27px);
+        // @include font-size(17px);
+        // @include line-height(27px);
     }
 
     &--reverse {
         color: $white;
+        &-bg {
+            background-color: $primary;
+        }
     }
 
     &--colour {
