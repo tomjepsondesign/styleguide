@@ -248,6 +248,10 @@ img {
   margin-bottom: 0;
 }
 
+pre, code {
+  white-space: normal;
+}
+
 .button {
   border-radius: 2px;
   -webkit-box-sizing: border-box;
