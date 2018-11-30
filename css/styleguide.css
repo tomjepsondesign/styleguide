@@ -842,7 +842,7 @@ input:checked + label {
   margin: 20px 20px 0 20px;
 }
 
-.pagecontent {
+.page-content {
   display: -ms-grid;
   display: grid;
   grid-column-gap: 20px;
@@ -953,5 +953,3 @@ input:checked + label {
   -ms-grid-column-span: 12;
   grid-column: span 12;
 }
-
-/*# sourceMappingURL=styleguide.css.map */
