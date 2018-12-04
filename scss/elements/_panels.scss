@@ -92,16 +92,18 @@
     }
     &__copy {
         margin-bottom: 20px;
-    }    
+    }
+
+    &[aria-hidden="true"] {
+        display: none;
+    }
+    
+    &[aria-hidden="false"] {
+        display: block;
+    }      
 }
 
-[aria-hidden="true"] {
-    display: none;
-}
 
-[aria-hidden="false"] {
-    display: block;
-}
 
 .noscroll {
     overflow: hidden;

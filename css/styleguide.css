@@ -692,12 +692,10 @@ pre, code {
 .overlay__copy {
   margin-bottom: 20px;
 }
-
-[aria-hidden="true"] {
+.overlay[aria-hidden="true"] {
   display: none;
 }
-
-[aria-hidden="false"] {
+.overlay[aria-hidden="false"] {
   display: block;
 }
 
