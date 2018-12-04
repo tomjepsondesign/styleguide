@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <title></title>
+    
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../css/styleguide.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">    
+    
+</head>
+
+<!-- Body class must have .noscroll toggled on when lightbox is shown, removed when lightbox is cleared -->
+<body class="noscroll">
+
+    <!-- Overlay can be shown/hidden by toggling aria-hidden true or false -->
+    <!-- Outer <div> needed as style layer for the overlay background -->
+    <!-- z-index properties are set in the CSS to position the overlay and overlay__content layers over all screen content -->
+    <div class="overlay" aria-hidden="false">
+            
+            <!-- This <div> holds the markup and content for the modal window -->
+            <div class="overlay__content">
+                
+                <!-- overlay__content can hold any content as needed -->
+                <h1 class="content-heading overlay__heading">Create Subjects</h1>
+                <p class="copy overlay__copy">Create individual, sequential subject IDs for your study. Either a prefix,
+                    suffix, or both values must be entered to create to your subject IDs</p>
+    
+                <div class="form-ctr">
+    
+                    <div class="form-field">
+                        <label class="form-field__label" for="field_a">Prefix</label>
+                        <input class="form-field__input" name="field_a" type="" placeholder="">
+                    </div>
+    
+                    <div class="form-field">
+                        <label class="form-field__label" for="">Suffix</label>
+                        <input class="form-field__input" type="" placeholder="">
+                    </div>
+    
+                    <div class="form-field">
+                        <label class="form-field__label" for="">Number of Subjects</label>
+                        <input class="form-field__input" type="" placeholder="">
+                    </div>
+    
+                </div>
+    
+                <button class="action">Create Subjects</button>
+    
+            </div>
+    
+        </div>
+        
+</body>
+</html>
