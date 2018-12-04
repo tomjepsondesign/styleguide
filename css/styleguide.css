@@ -252,6 +252,42 @@ pre, code {
   white-space: normal;
 }
 
+.information {
+  font-weight: 400;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 27px;
+  line-height: 1.6875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (min-width: 75em) {
+  .information {
+    font-size: 17px;
+    font-size: 1.0625rem;
+    line-height: 27px;
+    line-height: 1.6875rem;
+  }
+}
+.information__heading {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40%;
+          flex: 1 1 40%;
+  font-weight: 700;
+}
+.information__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 60%;
+          flex: 1 1 60%;
+}
+
 .button {
   border-radius: 2px;
   -webkit-box-sizing: border-box;
@@ -426,7 +462,7 @@ pre, code {
   grid-area: header;
   padding: 10px;
   width: 100%;
-  z-index: 999;
+  z-index: 500;
 }
 .top-navigation__logo {
   -webkit-box-flex: 0;
@@ -620,14 +656,23 @@ pre, code {
   grid-column: span 12;
 }
 
-.lightbox {
+.overlay {
+  background-color: rgba(20, 25, 28, 0.75);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 800;
+}
+.overlay__content {
   background-color: #ffffff;
   border: 1px solid rgba(20, 25, 28, 0.15);
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-box-shadow: 0 7px 14px 0 rgba(20, 25, 28, 0.1);
-          box-shadow: 0 7px 14px 0 rgba(20, 25, 28, 0.1);
+  -webkit-box-shadow: 0 7px 21px 0 rgba(20, 25, 28, 0.35);
+          box-shadow: 0 7px 21px 0 rgba(20, 25, 28, 0.35);
   left: 50%;
   line-height: 0;
   margin: 0 auto;
@@ -639,12 +684,23 @@ pre, code {
           transform: translate(-50%, -50%);
   text-align: center;
   width: 45%;
+  z-index: 900;
 }
-.lightbox__heading {
+.overlay__heading {
   margin-bottom: 10px;
 }
-.lightbox__content {
+.overlay__copy {
   margin-bottom: 20px;
+}
+.overlay[aria-hidden="true"] {
+  display: none;
+}
+.overlay[aria-hidden="false"] {
+  display: block;
+}
+
+.noscroll {
+  overflow: hidden;
 }
 
 .data-table {
@@ -957,3 +1013,5 @@ input:checked + label {
   -ms-grid-column-span: 12;
   grid-column: span 12;
 }
+
+/*# sourceMappingURL=styleguide.css.map */

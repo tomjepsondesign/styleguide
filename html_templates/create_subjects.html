@@ -1,55 +1,193 @@
 <!doctype html>
 <html>
-    
+
 <head>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    
+
     <title></title>
-    
+
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <link rel="stylesheet" href="../css/styleguide.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT" crossorigin="anonymous">    
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
 </head>
 
-<body>
+<body class="">
 
-<div class="lightbox">
+    <div class="pageframe">
 
-    <h1 class="content-heading lightbox__heading">Create Subjects</h1>
-    <p class="copy lightbox__content">Create individual, sequential subject IDs for your study. Either a prefix,
-        suffix, or both values must be entered to create to your subject IDs</p>
+        <section class="top-navigation">
+            <div class="top-navigation__logo">
+                <img src="http://placehold.it/150x36" alt="Logo" />
+            </div>
+            <ul class="top-navigation__items">
+                <li class="top-navigation__item top-navigation__item--active"><a href="#">Active Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+            </ul>
+        </section>
 
-    <div class="form-ctr">
+        <section class="pagebody">
 
-        <div class="form-field">
-            <label class="form-field__label" for="field_a">Prefix</label>
-            <input class="form-field__input" name="field_a" type="" placeholder="">
-        </div>
+            <section class="sidebar">
 
-        <div class="form-field">
-            <label class="form-field__label" for="">Suffix</label>
-            <input class="form-field__input" type="" placeholder="">
-        </div>
+                <ul class="sidebar__items">
+                    <li class="sidebar__item sidebar__item--active"><a href="#">Active Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                </ul>
 
-        <div class="form-field">
-            <label class="form-field__label" for="">Number of Subjects</label>
-            <input class="form-field__input" type="" placeholder="">
+                <div class="sidebar__divider"></div>
+
+                <ul class="sidebar__items">
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                </ul>
+
+            </section>
+
+            <router-outlet></router-outlet>
+
+            <section class="contentframe">
+
+                <section class="page-header">
+
+                    <div class="page-breadcrumb">
+                        <ul class="page-breadcrumb__list">
+                            <li class="page-breadcrumb__item"><a class="link" href="index.html">Root</a></li>
+                            <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                            <li class="page-breadcrumb__item"><a class="link" href="#">Level 1</a></li>
+                            <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                            <li class="page-breadcrumb__item"><a class="link" href="#">Level 2</a></li>
+                        </ul>
+                    </div>
+                    <div class="page-heading">
+                        <h1 class="large-heading">{Subject ID}</h1>
+                    </div>
+                    <div class="page-action">
+                        <button class="open-overlay" href="#">Open Overlay</button>
+                    </div>
+
+                </section>
+
+                <div class="page-content">
+
+                    <div class="panel-style content-panel content-panel--sm">
+                        <h1 class="content-heading">Study Information</h1>
+                        <dl _ngcontent-c6="" class="information">
+                            <dt _ngcontent-c6="" class="information__heading">Study Name</dt>
+                            <dd _ngcontent-c6="" class="information__item"> BiotaSense Alpha</dd>
+                            <dt _ngcontent-c6="" class="information__heading">Description</dt>
+                            <dd _ngcontent-c6="" class="information__item">
+                                <pre _ngcontent-c6="">
+                                            This is series of lines relating to the study. 
+                                        </pre>
+                            </dd>
+                            <dt _ngcontent-c6="" class="information__heading">Study Code</dt>
+                            <dd _ngcontent-c6="" class="information__item"> 9ca3</dd>
+                            <dt _ngcontent-c6="" class="information__heading">Study PIN</dt>
+                            <dd _ngcontent-c6="" class="information__item"> 1167</dd>
+                        </dl>
+                    </div>
+
+                    <div class="content-panel content-panel--lg">
+                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel
+                            enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus
+                            nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec
+                            interdum. Nulla rutrum felis justo. Morbi non malesuada nunc, eu sodales eros. Proin a
+                            lorem faucibus, vestibulum sapien quis, vehicula nisi.</p>
+                    </div>
+
+                    <div class="page-content">
+
+                        <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
+                        <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
+                        <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
+                        <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+        </section>
+    </div>
+
+    <div class="overlay" aria-hidden="true">
+
+        <div class="overlay__content">
+
+            <h1 class="content-heading overlay__heading">Create Subjects</h1>
+            <p class="copy overlay__copy">Create individual, sequential subject IDs for your study. Either a prefix,
+                suffix, or both values must be entered to create to your subject IDs</p>
+
+            <div class="form-ctr">
+
+                <div class="form-field">
+                    <label class="form-field__label" for="field_a">Prefix</label>
+                    <input class="form-field__input" name="field_a" type="" placeholder="">
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field__label" for="">Suffix</label>
+                    <input class="form-field__input" type="" placeholder="">
+                </div>
+
+                <div class="form-field">
+                    <label class="form-field__label" for="">Number of Subjects</label>
+                    <input class="form-field__input" type="" placeholder="">
+                </div>
+
+            </div>
+
+            <button class="action">Create Subjects</button>
+
         </div>
 
     </div>
 
-    <button class="action">Create Subjects</button>
+    <script>
+        var body = document.body,
+            overlay = document.querySelector('.overlay'),
+            overlayBtts = document.querySelectorAll('button[class$="overlay"]');
 
-</div>
+        [].forEach.call(overlayBtts, function (btt) {
+
+            btt.addEventListener('click', function () {
+
+                /* Detect the button class name */
+                var overlayOpen = this.className === 'open-overlay';
+
+                /* Toggle the aria-hidden state on the overlay and the 
+                   no-scroll class on the body */
+                overlay.setAttribute('aria-hidden', !overlayOpen);
+                body.classList.toggle('noscroll', overlayOpen);
+
+                /* On some mobile browser when the overlay was previously
+                   opened and scrolled, if you open it again it doesn't 
+                   reset its scrollTop property */
+                overlay.scrollTop = 0;
+
+            }, false);
+
+        });
+    </script>
 
 </body>
+
 </html>

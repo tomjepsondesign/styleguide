@@ -33,3 +33,21 @@
 pre, code {
     white-space: normal;
 }
+
+// Displays a heading/item list as rows in a panel
+// Use with DL-DT-DD or UL-LI as a preference
+
+.information {
+    @include standard-font;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__heading {
+        flex: 1 1 40%;
+        font-weight: $bold;
+    }
+    &__item {
+        flex: 1 1 60%;
+    }
+}
