@@ -16,9 +16,14 @@
     }
 
     &__items {
-        display: flex;
-        flex: 1 1 auto;
-        justify-content: flex-end;
+        display: none;
+
+        @media screen and (min-width: 960px) {
+            display: flex;
+            flex: 1 1 auto;
+            justify-content: flex-end;      
+        }
+
     }
 
     &__item {
@@ -60,10 +65,17 @@
     //border-right: 1px solid $dark35;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     grid-area: sidebar;
     height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
     padding: 10px 10px 10px 10px;
+    
+
+    @media screen and (min-width: 960px) {
+        flex-direction: column;        
+    }    
 
     &__divider {
         background-color: $dark15;
@@ -74,8 +86,13 @@
 
     &__items {
         display: flex;
-        flex: 0 1 auto;
-        flex-direction: column;
+        flex: 0 0 auto;
+        flex-direction: row;
+
+        @media screen and (min-width: 960px) {
+            flex: 0 1 auto;
+            flex-direction: column;        
+        }           
     }
 
     &__item {

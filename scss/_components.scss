@@ -25,11 +25,21 @@
 .pagebody {
     display: grid;
     grid-area: body;
-    grid-template-columns: 300px auto;
-    grid-template-rows: auto;
+
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto;
     grid-template-areas:
-        "sidebar content";
-    height: 100%;    
+    "sidebar"
+    "content";
+
+    height: 100%;
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "sidebar content";
+    }
 }
 
 //Page frame used to position the actual content inside it's grid cell
