@@ -118,11 +118,14 @@
     //line-height: 0;
     &--center {
         text-align: center;
-    }    
+    }
     &--shadow {
         -webkit-box-shadow: 0 7px 14px 0 $dark10;
                 box-shadow: 0 7px 14px 0 $dark10;
     }
+    &--no_border {
+        border: none;
+    }     
 }
 
 // Creates error message area inside a panel

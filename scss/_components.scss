@@ -23,6 +23,7 @@
 
 //Body gives layout for the sidebar + content
 .pagebody {
+    background-color: rgba($dark,0.01);
     display: grid;
     grid-area: body;
 
@@ -61,10 +62,6 @@
         -ms-grid-column-span: 12;
     grid-column: span 12;
     margin-bottom: 20px;
-
-    &:last-of-type {
-        margin-bottom: 0;
-    }
 }
 
 // Standard areas for all pages
