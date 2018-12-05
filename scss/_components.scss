@@ -46,6 +46,7 @@
 .contentframe {
     grid-area: content;
     margin: 20px 20px 0 20px;
+    //max-width: 1280px;
 }
 
 // Layout grid for the 'content' grid area
@@ -59,6 +60,11 @@
     grid-template-rows: repeat(auto-fit);
         -ms-grid-column-span: 12;
     grid-column: span 12;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 // Standard areas for all pages
@@ -120,20 +126,6 @@
     grid-area: action;
     -ms-grid-column-align: end;
         justify-self: end;
-}
-
-// Elements
-
-// A half-width container for content
-.content-half {
-    -ms-grid-column-span: 6;
-    grid-column: span 6;
-}
-
-// A full-width container for content
-.content-full {
-    -ms-grid-column-span: 12;
-    grid-column: span 12;
 }
 
 // ************************************ //

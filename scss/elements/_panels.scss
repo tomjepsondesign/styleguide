@@ -1,67 +1,17 @@
-.panel-style {
-    background-color: $white;
-    border: 1px solid $dark15;
-    border-radius: 4px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    //line-height: 0;
-    &--center {
-        text-align: center;
-    }    
-    &--shadow {
-        -webkit-box-shadow: 0 7px 14px 0 $dark10;
-                box-shadow: 0 7px 14px 0 $dark10;
-    }
-}
-
-.panel-error {
-    background-color: $negative;
-    border-radius: 2px;
-    color: $white;
-    margin-bottom: 10px;
-    padding: 7px;
-    position: relative;
-    @include font-size(15px);
-    @include line-height(15px);
-    &:after {
-        content: "\f057";
-        font-family: "FontAwesome";
-        position: absolute;
-        right: 7px;
-        top: 7px;
-        @include font-size(17px);
-    }
-}
-
-.content-panel {
-    padding: 20px;
+// Revised class for content areas
+// Check for use of .content-half and .content-full before deprecating those!
+.content {
     -ms-grid-column-span: 12;
     grid-column: span 12;
 
-    // @media screen and (min-width: 960px) {
-    //     background-color: red;
-    //     -ms-grid-column-span: 12;
-    //     grid-column: span 12;    
-    // }
-
-    // @media screen and (min-width: 1170px) {
-    //     background-color: blue;
-    // }
-    // 4-up panes
-    &--xs {
-        -ms-grid-column-span: 3;
-        grid-column: span 3;
-    }
-    // 3-up panes
-    &--sm {
-        -ms-grid-column-span: 4;
-        grid-column: span 4;
+    @at-root #{&}--half {
+        @extend .content;
 
         @media screen and (min-width: 728px) {
             -ms-grid-column-span: 6;
             grid-column: span 6;
         }        
-
+    
         @media screen and (min-width: 960px) {
             -ms-grid-column-span: 12;
             grid-column: span 12;    
@@ -70,6 +20,62 @@
         @media screen and (min-width: 1024px) {
             -ms-grid-column-span: 6;
             grid-column: span 6;            
+        }             
+
+    }
+    @at-root #{&}--full {
+        @extend .content;
+    }    
+}
+
+// Layout class for *all* panels
+// Panels span 3-col, 4-col, 6-col, or 12-col
+.content-panel {
+    padding: 20px;
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+
+    // 4-up panes
+    @at-root #{&}--xs {
+        @extend .content-panel;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 3;
+            grid-column: span 3;
+        }        
+
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;       
+        }        
+        
+        @media screen and (min-width: 1170px) {
+            -ms-grid-column-span: 3;
+            grid-column: span 3;       
+        }
+    }
+    // 3-up panes
+    @at-root #{&}--sm {
+        @extend .content-panel;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 4;
+            grid-column: span 4;
+        }        
+
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+        
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 4;
+            grid-column: span 4;         
         }         
     }
     // This need deprecating!
@@ -99,13 +105,48 @@
     // 1-up pane
     @at-root #{&}--full {
         @extend .content-panel;
-        // -ms-grid-column-span: 12;
-        // grid-column: span 12;
     }
 }
 
-.overlay {
+// Default styling for panels plus embelishments
+.panel-style {
+    background-color: $white;
+    border: 1px solid $dark15;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    //line-height: 0;
+    &--center {
+        text-align: center;
+    }    
+    &--shadow {
+        -webkit-box-shadow: 0 7px 14px 0 $dark10;
+                box-shadow: 0 7px 14px 0 $dark10;
+    }
+}
 
+// Creates error message area inside a panel
+.panel-error {
+    background-color: $negative;
+    border-radius: 2px;
+    color: $white;
+    margin-bottom: 10px;
+    padding: 7px;
+    position: relative;
+    @include font-size(15px);
+    @include line-height(15px);
+    &:after {
+        content: "\f057";
+        font-family: "FontAwesome";
+        position: absolute;
+        right: 7px;
+        top: 7px;
+        @include font-size(17px);
+    }
+}
+
+// Class for lightbox and background overlay
+.overlay {
     background-color: rgba($dark,0.75);
     bottom: 0;
     left: 0;
@@ -148,8 +189,7 @@
     }      
 }
 
-
-
+// Class applied to <body> when .overlay is triggered (req. jQuery)
 .noscroll {
     overflow: hidden;
 }
