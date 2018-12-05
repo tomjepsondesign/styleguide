@@ -35,27 +35,72 @@
 
 .content-panel {
     padding: 20px;
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+
+    // @media screen and (min-width: 960px) {
+    //     background-color: red;
+    //     -ms-grid-column-span: 12;
+    //     grid-column: span 12;    
+    // }
+
+    // @media screen and (min-width: 1170px) {
+    //     background-color: blue;
+    // }
+    // 4-up panes
     &--xs {
         -ms-grid-column-span: 3;
         grid-column: span 3;
     }
+    // 3-up panes
     &--sm {
         -ms-grid-column-span: 4;
         grid-column: span 4;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;
+        }        
+
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+        
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;            
+        }         
     }
+    // This need deprecating!
     &--md {
         -ms-grid-column-span: 5;
         grid-column: span 5;
     }
+    // 2-up panes
     @at-root #{&}--lg {
-        @extend .content-panel;        
-        -ms-grid-column-span: 6;
-        grid-column: span 6;
-    }    
+        @extend .content-panel;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;
+        }        
+
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+        
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;            
+        }        
+    }
+    // 1-up pane
     @at-root #{&}--full {
         @extend .content-panel;
-        -ms-grid-column-span: 12;
-        grid-column: span 12;
+        // -ms-grid-column-span: 12;
+        // grid-column: span 12;
     }
 }
 

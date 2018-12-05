@@ -660,6 +660,8 @@ pre, code {
 
 .content-panel, .content-panel--lg, .content-panel--full {
   padding: 20px;
+  -ms-grid-column-span: 12;
+  grid-column: span 12;
 }
 .content-panel--xs {
   -ms-grid-column-span: 3;
@@ -669,17 +671,45 @@ pre, code {
   -ms-grid-column-span: 4;
   grid-column: span 4;
 }
+@media screen and (min-width: 728px) {
+  .content-panel--sm {
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
+}
+@media screen and (min-width: 960px) {
+  .content-panel--sm {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content-panel--sm {
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
+}
 .content-panel--md {
   -ms-grid-column-span: 5;
   grid-column: span 5;
 }
-.content-panel--lg {
-  -ms-grid-column-span: 6;
-  grid-column: span 6;
+@media screen and (min-width: 728px) {
+  .content-panel--lg {
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
 }
-.content-panel--full {
-  -ms-grid-column-span: 12;
-  grid-column: span 12;
+@media screen and (min-width: 960px) {
+  .content-panel--lg {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content-panel--lg {
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
 }
 
 .overlay {
@@ -1047,3 +1077,5 @@ input:checked + label {
   -ms-grid-column-span: 12;
   grid-column: span 12;
 }
+
+/*# sourceMappingURL=styleguide.css.map */
