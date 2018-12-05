@@ -43,7 +43,7 @@ pre, code {
     flex-direction: column;
     flex-wrap: wrap;
     
-    @media screen and (min-width: 505px) {
+    @media screen and (min-width: 525px) {
         flex-direction: row;
     }
 
@@ -51,14 +51,14 @@ pre, code {
         flex: 1 1 auto;
         font-weight: $bold;
 
-        @media screen and (min-width: 505px) {
+        @media screen and (min-width: 525px) {
             flex: 1 1 40%;
         }        
     }
     &__item {
         flex: 1 1 auto;
 
-        @media screen and (min-width: 505px) {
+        @media screen and (min-width: 525px) {
             flex: 1 1 60%;
         }        
     }

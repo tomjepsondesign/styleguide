@@ -143,6 +143,7 @@ img {
   font-size: 1.0625rem;
   line-height: 27px;
   line-height: 1.6875rem;
+  margin-bottom: 0.8125rem;
 }
 @media screen and (min-width: 75em) {
   .copy, .accent {
@@ -151,6 +152,9 @@ img {
     line-height: 27px;
     line-height: 1.6875rem;
   }
+}
+.copy:last-of-type, .accent:last-of-type {
+  margin-bottom: 0;
 }
 
 .accent {
@@ -276,7 +280,7 @@ pre, code {
     line-height: 1.6875rem;
   }
 }
-@media screen and (min-width: 505px) {
+@media screen and (min-width: 525px) {
   .information {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -290,7 +294,7 @@ pre, code {
           flex: 1 1 auto;
   font-weight: 700;
 }
-@media screen and (min-width: 505px) {
+@media screen and (min-width: 525px) {
   .information__heading {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 40%;
@@ -302,7 +306,7 @@ pre, code {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
 }
-@media screen and (min-width: 505px) {
+@media screen and (min-width: 525px) {
   .information__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 60%;
@@ -578,7 +582,7 @@ pre, code {
 
 .sidebar {
   background-color: #ffffff;
-  border-right: 1px solid rgba(20, 25, 28, 0.35);
+  border-bottom: 1px solid rgba(20, 25, 28, 0.35);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -596,6 +600,7 @@ pre, code {
 }
 @media screen and (min-width: 960px) {
   .sidebar {
+    border-right: 1px solid rgba(20, 25, 28, 0.35);
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
