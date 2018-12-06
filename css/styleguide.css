@@ -567,7 +567,7 @@ pre, code {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   text-align: right;
-  padding: 12px 10px 12px 0;
+  padding: 11px 10px 12px 0;
 }
 @media screen and (min-width: 768px) {
   .top-navigation__menu {
@@ -653,6 +653,13 @@ pre, code {
   font-size: 0.9375rem;
   line-height: 15px;
   line-height: 0.9375rem;
+}
+@media screen and (min-width: 768px) {
+  .top-navigation__item a {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
 }
 .top-navigation__item a:hover {
   background-color: #007CBF;

@@ -5,6 +5,8 @@
 //     cursor: pointer;
 //   }
 
+$navbreakpoint: 768px;
+
 .top-navigation {
     background-color: $white;
     border-bottom: 1px solid $dark35;
@@ -18,7 +20,7 @@
     width: 100%;
     z-index: 500;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $navbreakpoint) {
         flex-direction: row;
     }
 
@@ -27,7 +29,7 @@
         flex-direction: row;
         flex: 1 1 auto;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $navbreakpoint) {
             flex-direction: column;
         }
 
@@ -36,9 +38,9 @@
     &__menu {
         flex: 1 1 auto;
         text-align: right;
-        padding: 12px 10px 12px 0;
+        padding: 11px 10px 12px 0;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $navbreakpoint) {
             display: none;
         }        
     }
@@ -62,7 +64,7 @@
             margin-top: 10px;
         }
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $navbreakpoint) {
             background-color: transparent;
             display: flex;
             flex: 1 1 auto;
@@ -81,7 +83,7 @@
         display: flex;
         flex: 1 1 auto;
         
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $navbreakpoint) {
             flex: 0 1 auto;
         }        
 
@@ -95,9 +97,9 @@
             @include font-size(15px);
             @include line-height(15px);
 
-            // @media screen and (min-width: 768px) {
-            //     flex: 0 1 auto;
-            // } 
+            @media screen and (min-width: $navbreakpoint) {
+                flex: 0 1 auto;
+            } 
 
             &:hover {
                 background-color: $primary;
