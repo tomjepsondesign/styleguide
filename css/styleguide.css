@@ -889,7 +889,6 @@ pre, code {
 }
 
 .data-table {
-  overflow-x: auto;
   width: 100%;
   text-align: left;
   font-size: 15px;
