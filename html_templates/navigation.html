@@ -31,18 +31,24 @@
         <!-- .top-navigation is the primary navigation area on the standard dashboard layout -->
         <section class="top-navigation">
 
-            <div class="top-navigation__logo">
-                <img src="http://placehold.it/150x36" alt="Logo" />
-            </div>
+            <div class="top-navigation__header">
+                <div class="top-navigation__logo">
+                    <img src="http://placehold.it/150x36" alt="Logo" />
+                </div>
+
+                <div class="top-navigation__menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>            
 
             <ul class="top-navigation__items">
-                <li class="top-navigation__item top-navigation__item--active"><a href="#">Active Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Active Navigation Item</a></li>
                 <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
                 <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
                 <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
             </ul>
 
-        </section>
+        </section> <!-- / .top-navigation -->
 
         <!-- .pagebody sets up the grid areas for both .sidebar and .contentframe -->
         <!-- .pagebody acts as a responsive wrapper for smaller screens -->
@@ -67,7 +73,7 @@
                     <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
                 </ul>
 
-            </section>
+            </section><!-- / .sidebar -->
 
             <!-- .contentframe is the dedicated content area on the standard dashboard layout -->
             <section class="contentframe">
@@ -91,7 +97,7 @@
                         <a class="button button--primary" href="#">Button</a>
                     </div>
 
-                </section>
+                </section> --> <!-- / .page-header -->
 
                 <!-- .page-content, within .contentframe, sets up 'rows' into which single content areas can be placed -->
                 <!-- Both content--half/full and content--panel__[x] can be placed within a .page-content row -->
@@ -119,11 +125,13 @@
                             viverra odio in tempor. Mauris eu sagittis arcu, eget vestibulum nibh.</p>
                     </div>
 
-                </div>
+                </div> <!-- / .page-content -->
 
-            </section>
-        </section>
-    </div>
+            </section> <!-- / .contentframe -->
+
+        </section> <!-- / .pagebody -->
+
+    </div> <!-- / .pageframe -->
 
 </body>
 

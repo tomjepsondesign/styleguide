@@ -1,26 +1,66 @@
+// .Navbar__Link-toggle {
+//     align-self: flex-end;
+//     display: initial;
+//     position: absolute;
+//     cursor: pointer;
+//   }
+
 .top-navigation {
     background-color: $white;
     border-bottom: 1px solid $dark35;
     box-shadow: 0 7px 14px 0 $dark10;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     grid-area: header;
+    height: auto;
     padding: 10px;
     width: 100%;
     z-index: 500;
 
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: row;
+        flex: 1 1 auto;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: column;
+        }
+
+    }
+
+    &__menu {
+        background-color: blue;
+        flex: 1 1 auto;
+        text-align: right;
+        padding: 12px 0;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }        
+    }
+
     &__logo {
+        display: flex;
         flex: 0 0 auto;
-        height: 36px;
+        height: 36px;    
         width: 159px;
     }
 
     &__items {
-        display: none;
+        background-color: red;
+        display: flex;
+        flex: 1 1 100%;
+        flex-direction: column;
 
-        @media screen and (min-width: 960px) {
+        @media screen and (min-width: 768px) {
             display: flex;
             flex: 1 1 auto;
+            flex-direction: row;
             justify-content: flex-end;      
         }
 
@@ -28,17 +68,26 @@
 
     &__item {
         display: flex;
-        flex: 0 1 auto;
+        flex: 1 1 auto;
+        
+        @media screen and (min-width: 768px) {
+            flex: 0 1 auto;
+        }        
 
         a {            
             color: $dark;
-            flex: 0 1 auto;
+            flex: 1 1 100%;
             text-decoration: none;
             padding: 12px 12px;
             transition:
                 background-color 0.1s ease-in-out;            
-                @include font-size(15px);
-                @include line-height(15px);
+            @include font-size(15px);
+            @include line-height(15px);
+
+            // @media screen and (min-width: 768px) {
+            //     flex: 0 1 auto;
+            // } 
+
             &:hover {
                 background-color: $primary;
                 border-radius: 2px;
