@@ -11,16 +11,6 @@
         margin-bottom: 20px;
         width: 75%;
     }
-
-    .form-field__error {
-        display: none;
-    }    
-
-    &--error {    
-        .form-field__error {
-            display: block;
-        }
-    }
 }
 
 .form-field {
@@ -30,7 +20,38 @@
     margin-bottom: 10px;
     &:last-of-type {
         margin-bottom: 0;
+    }
+
+    > .form-field__error {
+        display: none;
+    }    
+
+    &--error {    
+        .form-field__error {
+            display: block;
         }
+        > .form-field__input {
+            border: 2px solid $negative;
+            padding: 0 0 0 9px;
+            color: $negative;
+            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                color: rgba($negative,0.5);
+            }
+            &::-moz-placeholder { /* Firefox 19+ */
+                color: rgba($negative,0.5);
+            }
+            &:-ms-input-placeholder { /* IE 10+ */
+                color: rgba($negative,0.5);
+            }
+            &:-moz-placeholder { /* Firefox 18- */
+                color: rgba($negative,0.5);
+            }            
+            &:focus {
+                border: 2px solid $negativeDark;
+                color: $dark;
+            }       
+        }
+    }
 
     &__label {
         @include standard-font;
@@ -65,27 +86,28 @@
             outline: none;
             padding: 0 0 0 9px;
         }
-        &--error {
-            border: 2px solid $negative;
-            padding: 0 0 0 9px;
-            color: $negative;
-            &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                color: rgba($negative,0.5);
-            }
-            &::-moz-placeholder { /* Firefox 19+ */
-                color: rgba($negative,0.5);
-            }
-            &:-ms-input-placeholder { /* IE 10+ */
-                color: rgba($negative,0.5);
-            }
-            &:-moz-placeholder { /* Firefox 18- */
-                color: rgba($negative,0.5);
-            }            
-            &:focus {
-                border: 2px solid $negativeDark;
-                color: $dark;
-            }       
-        }
+        // Error styling moved up to .form-field to allow for error message and visual style toggling
+        // &--error {
+        //     border: 2px solid $negative;
+        //     padding: 0 0 0 9px;
+        //     color: $negative;
+        //     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        //         color: rgba($negative,0.5);
+        //     }
+        //     &::-moz-placeholder { /* Firefox 19+ */
+        //         color: rgba($negative,0.5);
+        //     }
+        //     &:-ms-input-placeholder { /* IE 10+ */
+        //         color: rgba($negative,0.5);
+        //     }
+        //     &:-moz-placeholder { /* Firefox 18- */
+        //         color: rgba($negative,0.5);
+        //     }            
+        //     &:focus {
+        //         border: 2px solid $negativeDark;
+        //         color: $dark;
+        //     }       
+        // }
         &--disabled {
             background-color: $dark5;
             border: 1px solid $dark15;
