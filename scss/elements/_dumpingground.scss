@@ -40,14 +40,55 @@ pre, code {
 .information {
     @include standard-font;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
+    
+    @media screen and (min-width: 525px) {
+        flex-direction: row;
+    }
 
     &__heading {
-        flex: 1 1 40%;
+        flex: 1 1 auto;
         font-weight: $bold;
+
+        @media screen and (min-width: 525px) {
+            flex: 1 1 40%;
+        }        
     }
     &__item {
-        flex: 1 1 60%;
+        flex: 1 1 auto;
+
+        @media screen and (min-width: 525px) {
+            flex: 1 1 60%;
+        }        
     }
+}
+
+// Check before removing
+// Use new class in _panels.scss if making new layouts
+.content-half {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+
+    @media screen and (min-width: 728px) {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;
+    }        
+
+    @media screen and (min-width: 960px) {
+        -ms-grid-column-span: 12;
+        grid-column: span 12;    
+    }
+    
+    @media screen and (min-width: 1024px) {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;            
+    }
+}
+
+// Check before removing
+// Use new class in _panels.scss if making new layouts
+.content-full {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
 }

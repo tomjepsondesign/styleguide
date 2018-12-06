@@ -1,3 +1,114 @@
+// Revised class for content areas
+// Check for use of .content-half and .content-full before deprecating those!
+.content {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+
+    @at-root #{&}--half {
+        @extend .content;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;
+        }        
+    
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+        
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;            
+        }             
+
+    }
+    @at-root #{&}--full {
+        @extend .content;
+    }    
+}
+
+// Layout class for *all* panels
+// Panels span 3-col, 4-col, 6-col, or 12-col
+.content-panel {
+    padding: 20px;
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+
+    // 4-up panes
+    @at-root #{&}--xs {
+        @extend .content-panel;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 3;
+            grid-column: span 3;
+        }        
+
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;       
+        }        
+        
+        @media screen and (min-width: 1170px) {
+            -ms-grid-column-span: 3;
+            grid-column: span 3;       
+        }
+    }
+    // 3-up panes
+    @at-root #{&}--sm {
+        @extend .content-panel;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 4;
+            grid-column: span 4;
+        }        
+
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+        
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 4;
+            grid-column: span 4;         
+        }         
+    }
+    // This need deprecating!
+    &--md {
+        -ms-grid-column-span: 5;
+        grid-column: span 5;
+    }
+    // 2-up panes
+    @at-root #{&}--lg {
+        @extend .content-panel;
+
+        @media screen and (min-width: 728px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;
+        }        
+
+        @media screen and (min-width: 960px) {
+            -ms-grid-column-span: 12;
+            grid-column: span 12;    
+        }
+        
+        @media screen and (min-width: 1024px) {
+            -ms-grid-column-span: 6;
+            grid-column: span 6;            
+        }        
+    }
+    // 1-up pane
+    @at-root #{&}--full {
+        @extend .content-panel;
+    }
+}
+
+// Default styling for panels plus embelishments
 .panel-style {
     background-color: $white;
     border: 1px solid $dark15;
@@ -7,13 +118,17 @@
     //line-height: 0;
     &--center {
         text-align: center;
-    }    
+    }
     &--shadow {
         -webkit-box-shadow: 0 7px 14px 0 $dark10;
                 box-shadow: 0 7px 14px 0 $dark10;
     }
+    &--no_border {
+        border: none;
+    }     
 }
 
+// Creates error message area inside a panel
 .panel-error {
     background-color: $negative;
     border-radius: 2px;
@@ -33,34 +148,8 @@
     }
 }
 
-.content-panel {
-    padding: 20px;
-    &--xs {
-        -ms-grid-column-span: 3;
-        grid-column: span 3;
-    }
-    &--sm {
-        -ms-grid-column-span: 4;
-        grid-column: span 4;
-    }
-    &--md {
-        -ms-grid-column-span: 5;
-        grid-column: span 5;
-    }
-    @at-root #{&}--lg {
-        @extend .content-panel;        
-        -ms-grid-column-span: 6;
-        grid-column: span 6;
-    }    
-    @at-root #{&}--full {
-        @extend .content-panel;
-        -ms-grid-column-span: 12;
-        grid-column: span 12;
-    }
-}
-
+// Class for lightbox and background overlay
 .overlay {
-
     background-color: rgba($dark,0.75);
     bottom: 0;
     left: 0;
@@ -103,8 +192,7 @@
     }      
 }
 
-
-
+// Class applied to <body> when .overlay is triggered (req. jQuery)
 .noscroll {
     overflow: hidden;
 }

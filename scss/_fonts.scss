@@ -24,6 +24,10 @@
 
 .copy { 
     @include standard-font;
+    margin-bottom: 0.8125rem;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 .accent {

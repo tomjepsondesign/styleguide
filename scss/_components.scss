@@ -23,19 +23,31 @@
 
 //Body gives layout for the sidebar + content
 .pagebody {
+    background-color: rgba($dark,0.01);
     display: grid;
     grid-area: body;
-    grid-template-columns: 300px auto;
-    grid-template-rows: auto;
+
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto;
     grid-template-areas:
-        "sidebar content";
-    height: 100%;    
+    "sidebar"
+    "content";
+
+    height: 100%;
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "sidebar content";
+    }
 }
 
 //Page frame used to position the actual content inside it's grid cell
 .contentframe {
     grid-area: content;
     margin: 20px 20px 0 20px;
+    //max-width: 1280px;
 }
 
 // Layout grid for the 'content' grid area
@@ -49,6 +61,7 @@
     grid-template-rows: repeat(auto-fit);
         -ms-grid-column-span: 12;
     grid-column: span 12;
+    margin-bottom: 20px;
 }
 
 // Standard areas for all pages
@@ -110,20 +123,6 @@
     grid-area: action;
     -ms-grid-column-align: end;
         justify-self: end;
-}
-
-// Elements
-
-// A half-width container for content
-.content-half {
-    -ms-grid-column-span: 6;
-    grid-column: span 6;
-}
-
-// A full-width container for content
-.content-full {
-    -ms-grid-column-span: 12;
-    grid-column: span 12;
 }
 
 // ************************************ //

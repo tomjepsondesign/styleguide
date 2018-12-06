@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title></title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../css/styleguide.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+    <script src="../node_modules/chart.js/dist/Chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="pageframe">
+
+        <section class="top-navigation">
+            <div class="top-navigation__logo">
+                <img src="http://placehold.it/150x36" alt="Logo" />
+            </div>
+            <ul class="top-navigation__items">
+                <li class="top-navigation__item top-navigation__item--active"><a href="#">Active Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+            </ul>
+        </section>
+
+        <section class="pagebody">
+
+            <section class="sidebar">
+
+                <ul class="sidebar__items">
+                    <li class="sidebar__item sidebar__item--active"><a href="#">Active Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                </ul>
+
+                <div class="sidebar__divider"></div>
+
+                <ul class="sidebar__items">
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                    <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
+                </ul>
+
+            </section>
+
+            <router-outlet></router-outlet>
+
+            <section class="contentframe">
+                
+                <section class="page-header">
+
+                        <div class="page-breadcrumb">
+                            <ul class="page-breadcrumb__list">
+                                <li class="page-breadcrumb__item"><a class="link" href="index.html">Root</a></li>
+                                <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                                <li class="page-breadcrumb__item"><a class="link" href="#">Level 1</a></li>
+                                <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                                <li class="page-breadcrumb__item"><a class="link" href="#">Level 2</a></li>
+                            </ul>
+                        </div>
+                        <div class="page-heading">
+                            <h1 class="large-heading">{Subject ID}</h1>
+                        </div>
+                        <!-- <div class="page-action">
+                                    <a class="button button--primary" href="#">button text</a>
+                                </div> -->
+
+                </section>
+
+                <div class="page-content">
+                
+                    <div class="content--full">
+                        <p class="copy">Breakpoints for the responsive grid:</p>
+                    </div>
+
+                    <div class="content--full">
+                        <dl class="information">
+                            <dt class="information__heading">Full/large screens</dt>
+                            <dd class="information__item">1170px and up</dd>
+                            <dt class="information__heading">Standard screens</dt>
+                            <dd class="information__item">1024px and up</dd>
+                            <dt class="information__heading">Small screens</dt>
+                            <dd class="information__item">960px and up</dd>
+                            <dt class="information__heading">Tablet/very small screens</dt>
+                            <dd class="information__item">728px and up</dd>
+                            <dt class="information__heading">Mobile</dt>
+                            <dd class="information__item">Up to 727px</dd>
+                        </dl>
+                    </div>
+                        
+                </div>
+
+                <hr>
+
+                <div class="page-content">
+
+                <div class="content-full">
+                    <h1 class="large-heading">Full Width Content</h1>
+                </div>                    
+
+                    <div class="panel-style content-panel--full">
+                        <h1 class="content-heading">Full Panel</h1>
+                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>   
+                    
+                </div>
+
+                <div class="page-content">
+                
+                    <div class="content-full">
+                        <h1 class="large-heading">Large Panels</h1>
+                    </div>
+                
+                    <div class="content-panel--lg panel-style panel-style--shadow panel-style--no_border">
+                        <h1 class="content-heading">Lg Panel w. Chart</h1>
+                        <canvas id="dataChart" width="400" height="200"></canvas>
+                    
+                        <script>
+                            var ctx = document.getElementById("dataChart");
+                            var myChart = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                                    datasets: [{
+                                        label: '# of Votes',
+                                        data: [12, 19, 3, 5, 2, 3],
+                                        backgroundColor: [
+                                            'rgba(255, 99, 132, 0.2)',
+                                            'rgba(54, 162, 235, 0.2)',
+                                            'rgba(255, 206, 86, 0.2)',
+                                            'rgba(75, 192, 192, 0.2)',
+                                            'rgba(153, 102, 255, 0.2)',
+                                            'rgba(255, 159, 64, 0.2)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(255,99,132,1)',
+                                            'rgba(54, 162, 235, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)',
+                                            'rgba(153, 102, 255, 1)',
+                                            'rgba(255, 159, 64, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero: true
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                
+                    <div class="content-panel--lg panel-style panel-style--shadow panel-style--no_border">
+                        <h1 class="content-heading">Lg Panel</h1>
+                        <p class="copy">Alright, punk, now- Hey, hey, Doc, where are you? Precisely. Doc, I'm from the future. I came here in a time machine that you invented. Now, I need your help to get back to the year 1985. It's taken me almost thirty years and my entire family fortune to realize the vision of that day, my god has it been that long. Things have certainly changed around here. I remember when this was all farmland as far as the eye could see. Old man Peabody, owned all of this. He had this crazy idea about breeding pine trees.</p>
+                        <p class="copy">Look me up when you get there, guess I'll be about 47. Well, I figured, what the hell. You know
+                        Marty, I'm gonna be very sad to see you go. You've really mad a difference in my life, you've given me something to shoot for. Just knowing, that I'm gonna be around to se 1985, that I'm gonna succeed in this. That I'm gonna have a chance to travel through time. It's going to be really hard waiting 30 years before I could talk to you about everything that's happened in the past few days. I'm really gonna miss you, Marty. Marty, you didn't fall asleep, did you? What?</p>
+                    </div>
+                
+                </div>
+
+                <div class="page-content">
+                    
+                <div class="content-full">
+                    <h1 class="large-heading">Small Panels</h1>
+                </div>                    
+
+                    <div class="panel-style content-panel--sm">
+                            <h1 class="content-heading">Sm Panel</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>                   
+
+                    <div class="panel-style content-panel--sm">
+                            <h1 class="content-heading">Sm Panel</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>
+                    
+                    <div class="panel-style content-panel--sm">
+                            <h1 class="content-heading">Sm Panel</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>
+
+                </div>
+
+                <div class="page-content">
+                
+                    <div class="content-full">
+                        <h1 class="large-heading">X. Small Panels</h1>
+                    </div>
+
+                    <div class="panel-style content-panel--xs">
+                            <h1 class="content-heading">Xs Panel</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>
+
+                    <div class="panel-style content-panel--xs">
+                            <h1 class="content-heading">Xs Panel</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>
+                    
+                    <div class="panel-style content-panel--xs">
+                            <h1 class="content-heading">Xs Panel</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>   
+
+                    <div class="panel-style content-panel--xs">
+                            <h1 class="content-heading">Xs Panel</h1>
+                            <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>                        
+                    </div>                     
+                
+                </div>
+
+            </section>
+        </section>
+    </div>
+
+</body>
+
+</html>
