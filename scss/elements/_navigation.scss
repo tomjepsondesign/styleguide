@@ -34,10 +34,9 @@
     }
 
     &__menu {
-        background-color: blue;
         flex: 1 1 auto;
         text-align: right;
-        padding: 12px 0;
+        padding: 12px 10px 12px 0;
 
         @media screen and (min-width: 768px) {
             display: none;
@@ -52,18 +51,30 @@
     }
 
     &__items {
-        background-color: red;
-        display: flex;
+        background-color: $dark5;
+        display: none;
         flex: 1 1 100%;
         flex-direction: column;
 
+        // Class toggled for hamburger show/hide
+        &--hidden {
+            display: flex;
+            margin-top: 10px;
+        }
+
         @media screen and (min-width: 768px) {
+            background-color: transparent;
             display: flex;
             flex: 1 1 auto;
             flex-direction: row;
-            justify-content: flex-end;      
+            justify-content: flex-end;
+            
+            // Hack class to show menu if ...hidden is active if the user resizes the browser window!
+            &--hidden {
+                display: flex;
+                margin-top: 0;
+            }            
         }
-
     }
 
     &__item {

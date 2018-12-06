@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
         crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -32,14 +34,16 @@
         <section class="top-navigation">
 
             <div class="top-navigation__header">
+
                 <div class="top-navigation__logo">
                     <img src="http://placehold.it/150x36" alt="Logo" />
                 </div>
 
-                <div class="top-navigation__menu">
+                <div class="top-navigation__menu" id="menu">
                     <i class="fas fa-bars"></i>
                 </div>
-            </div>            
+
+            </div>
 
             <ul class="top-navigation__items">
                 <li class="top-navigation__item"><a href="#">Active Navigation Item</a></li>
@@ -49,6 +53,13 @@
             </ul>
 
         </section> <!-- / .top-navigation -->
+
+        <script>
+            $("#menu").click(function (event) {
+                $(".top-navigation__items").toggleClass('top-navigation__items--hidden');
+                // event.preventDefault();
+            }); 
+        </script>
 
         <!-- .pagebody sets up the grid areas for both .sidebar and .contentframe -->
         <!-- .pagebody acts as a responsive wrapper for smaller screens -->
@@ -93,18 +104,20 @@
                     <div class="page-heading">
                         <h1 class="large-heading">Page Title</h1>
                     </div>
-                    <div class="page-action">
+                    <!-- <div class="page-action">
                         <a class="button button--primary" href="#">Button</a>
-                    </div>
+                    </div> -->
 
-                </section> --> <!-- / .page-header -->
+                </section>
+                <!-- / .page-header -->
 
                 <!-- .page-content, within .contentframe, sets up 'rows' into which single content areas can be placed -->
                 <!-- Both content--half/full and content--panel__[x] can be placed within a .page-content row -->
                 <div class="page-content">
 
                     <div class="content--full">
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
+                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel
+                            enim iaculis
                             aliquam
                             in eu
                             nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
