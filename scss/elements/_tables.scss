@@ -25,6 +25,8 @@
 
     th, td {
         padding: 8px 10px 7px 10px;
+        min-width: auto;
+        white-space: nowrap;
     }
 
     &__link {

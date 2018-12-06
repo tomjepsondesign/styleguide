@@ -102,4 +102,5 @@ pre, code {
 .content-full {
     -ms-grid-column-span: 12;
     grid-column: span 12;
+    overflow: auto;
 }

@@ -142,7 +142,7 @@
     grid-template-rows: repeat(auto-fit);
     &--outer {
         margin: 0 auto;
-        width: 100%;
+        width: 100%;        
         @media screen and (min-width: 788px) {
             max-width: $med;  
         }
@@ -156,6 +156,6 @@
     }
     &--inner {
         -ms-grid-column-span: 12;
-        grid-column: span 12;
+        grid-column: span 12;    
     }
 }
