@@ -350,6 +350,7 @@ pre, code {
 .content-full {
   -ms-grid-column-span: 12;
   grid-column: span 12;
+  overflow: auto;
 }
 
 .button {
@@ -709,6 +710,9 @@ pre, code {
     grid-column: span 6;
   }
 }
+.content--full {
+  overflow: auto;
+}
 
 .content-panel, .content-panel--xs, .content-panel--sm, .content-panel--lg, .content-panel--full {
   padding: 20px;
@@ -885,6 +889,7 @@ pre, code {
 }
 
 .data-table {
+  overflow-x: auto;
   width: 100%;
   text-align: left;
   font-size: 15px;
@@ -908,6 +913,8 @@ pre, code {
 }
 .data-table th, .data-table td {
   padding: 8px 10px 7px 10px;
+  min-width: auto;
+  white-space: nowrap;
 }
 .data-table__link {
   color: inherit;

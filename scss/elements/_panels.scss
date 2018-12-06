@@ -25,6 +25,7 @@
     }
     @at-root #{&}--full {
         @extend .content;
+        overflow: auto;
     }    
 }
 
