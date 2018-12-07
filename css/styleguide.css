@@ -524,12 +524,60 @@ pre, code {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   grid-area: header;
+  height: auto;
   padding: 10px;
   width: 100%;
   z-index: 500;
 }
+@media screen and (min-width: 768px) {
+  .top-navigation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.top-navigation__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+@media screen and (min-width: 768px) {
+  .top-navigation__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.top-navigation__menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: right;
+  padding: 11px 10px 12px 0;
+}
+@media screen and (min-width: 768px) {
+  .top-navigation__menu {
+    display: none;
+  }
+}
 .top-navigation__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
@@ -537,34 +585,66 @@ pre, code {
   width: 159px;
 }
 .top-navigation__items {
+  background-color: rgba(20, 25, 28, 0.05);
   display: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-@media screen and (min-width: 960px) {
+.top-navigation__items--hidden {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
   .top-navigation__items {
+    background-color: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+  .top-navigation__items--hidden {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
   }
 }
 .top-navigation__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+@media screen and (min-width: 768px) {
+  .top-navigation__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
 }
 .top-navigation__item a {
   color: #14191C;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   text-decoration: none;
   padding: 12px 12px;
   -webkit-transition: background-color 0.1s ease-in-out;
@@ -573,6 +653,13 @@ pre, code {
   font-size: 0.9375rem;
   line-height: 15px;
   line-height: 0.9375rem;
+}
+@media screen and (min-width: 768px) {
+  .top-navigation__item a {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+  }
 }
 .top-navigation__item a:hover {
   background-color: #007CBF;
@@ -967,6 +1054,12 @@ pre, code {
 .form-field > .form-field__error {
   display: none;
 }
+.form-field--disabled > .form-field__input {
+  background-color: rgba(20, 25, 28, 0.05);
+  border: 1px solid rgba(20, 25, 28, 0.15);
+  color: rgba(20, 25, 28, 0.25);
+  pointer-events: none;
+}
 .form-field--error .form-field__error {
   display: block;
 }
@@ -1061,12 +1154,6 @@ pre, code {
   outline: none;
   padding: 0 0 0 9px;
 }
-.form-field__input--disabled {
-  background-color: rgba(20, 25, 28, 0.05);
-  border: 1px solid rgba(20, 25, 28, 0.15);
-  color: rgba(20, 25, 28, 0.25);
-  pointer-events: none;
-}
 .form-field__error {
   color: #BF0915;
   font-weight: 400;
@@ -1143,9 +1230,15 @@ input:checked + label {
 .pageframe {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 60px auto;
+  grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
+  grid-auto-rows: minmax(min-content, max-content);
   grid-template-areas: "header" "body";
   height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .pageframe {
+    grid-template-rows: 60px auto;
+  }
 }
 
 .pagebody {

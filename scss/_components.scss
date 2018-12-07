@@ -14,7 +14,10 @@
 .pageframe {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 60px auto;
+    grid-auto-rows: minmax(min-content, max-content);
+    @media screen and (min-width: 768px) {
+        grid-template-rows: 60px auto;
+    }
     grid-template-areas:
         "header"
         "body";

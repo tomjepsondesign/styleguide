@@ -21,26 +21,51 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
         crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
 
+    <!-- .pageframe defines the navigation / sidebar / contentframe grid areas for the standard dashboard layout -->
     <div class="pageframe">
 
+        <!-- .top-navigation is the primary navigation area on the standard dashboard layout -->
         <section class="top-navigation">
-            <div class="top-navigation__logo">
-                <img src="http://placehold.it/150x36" alt="Logo" />
+
+            <div class="top-navigation__header">
+
+                <div class="top-navigation__logo">
+                    <img src="http://placehold.it/150x36" alt="Logo" />
+                </div>
+
+                <div class="top-navigation__menu" id="menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+
             </div>
+
             <ul class="top-navigation__items">
-                <li class="top-navigation__item top-navigation__item--active"><a href="#">Active Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Active Navigation Item</a></li>
                 <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
                 <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
                 <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
             </ul>
-        </section>
 
+        </section> <!-- / .top-navigation -->
+
+        <script>
+            $("#menu").click(function (event) {
+                $(".top-navigation__items").toggleClass('top-navigation__items--hidden');
+                // event.preventDefault();
+            }); 
+        </script>
+
+        <!-- .pagebody sets up the grid areas for both .sidebar and .contentframe -->
+        <!-- .pagebody acts as a responsive wrapper for smaller screens -->
         <section class="pagebody">
 
+            <!-- .sidebar is a dedicated area for the secondary navigation on the standard dashboard layout -->
             <section class="sidebar">
 
                 <ul class="sidebar__items">
@@ -59,134 +84,40 @@
                     <li class="sidebar__item"><a href="#">Sidebar Item</a></li>
                 </ul>
 
-            </section>
+            </section><!-- / .sidebar -->
 
-            <router-outlet></router-outlet>
-
+            <!-- .contentframe is the dedicated content area on the standard dashboard layout -->
             <section class="contentframe">
-                
+
+                <!-- .page-header is an optional component for showing breadcrumbs, page title, and an action button -->
                 <section class="page-header">
 
-                        <div class="page-breadcrumb">
-                            <ul class="page-breadcrumb__list">
-                                <li class="page-breadcrumb__item"><a class="link" href="index.html">Root</a></li>
-                                <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
-                                <li class="page-breadcrumb__item"><a class="link" href="#">Level 1</a></li>
-                                <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
-                                <li class="page-breadcrumb__item"><a class="link" href="#">Level 2</a></li>
-                            </ul>
-                        </div>
-                        <div class="page-heading">
-                            <h1 class="large-heading">{Subject ID}</h1>
-                        </div>
-                        <!-- <div class="page-action">
-                                    <a class="button button--primary" href="#">button text</a>
-                                </div> -->
+                    <div class="page-breadcrumb">
+                        <ul class="page-breadcrumb__list">
+                            <li class="page-breadcrumb__item"><a class="link" href="index.html">Root</a></li>
+                            <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                            <li class="page-breadcrumb__item"><a class="link" href="#">Level 1</a></li>
+                            <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                            <li class="page-breadcrumb__item"><a class="link" href="#">Level 2</a></li>
+                        </ul>
+                    </div>
+                    <div class="page-heading">
+                        <h1 class="large-heading">Page Title</h1>
+                    </div>
+                    <!-- <div class="page-action">
+                        <a class="button button--primary" href="#">Button</a>
+                    </div> -->
 
                 </section>
+                <!-- / .page-header -->
 
+                <!-- .page-content, within .contentframe, sets up 'rows' into which single content areas can be placed -->
+                <!-- Both content--half/full and content--panel__[x] can be placed within a .page-content row -->
                 <div class="page-content">
 
-                    <div class="panel-style content-panel content-panel--sm">
-                    
-                        <div *ngIf="status.error" class="panel-error">
-                            <p>Failed to retrieve the Application API Status</p>
-                        </div>
-                    
-                        <h1 class="content-heading">Credentials</h1>
-                        <ul>
-                            <li><span class="accent">Subject ID</span> 000000</li>
-                            <li><span class="accent">Subject PIN</span> 0000</li>
-                        </ul>
-                    </div>
-
-                    <div class="panel-style content-panel content-panel--sm">
-                        <h1 class="content-heading">Fitbit Status</h1>
-                        <ul>
-                            <li><span class="accent">Authorisation</span> Not Authorised</li>
-                            <li><span class="accent">Last Sync</span> [DD]/[MM]/[YYYY] at [HH:MM]</li>
-                        </ul>
-                    </div>
-
-                    <div class="panel-style content-panel content-panel--sm">
-                        <h1 class="content-heading">Study Information</h1>
-                        <dl _ngcontent-c6="" class="information">
-                            <dt _ngcontent-c6="" class="information__heading">Study Name</dt>
-                            <dd _ngcontent-c6="" class="information__item"> BiotaSense Alpha</dd>
-                            <dt _ngcontent-c6="" class="information__heading">Description</dt>
-                            <dd _ngcontent-c6="" class="information__item">
-                                <pre _ngcontent-c6="">
-                                    This is series of lines relating to the study. 
-                                </pre>
-                            </dd>
-                            <dt _ngcontent-c6="" class="information__heading">Study Code</dt>
-                            <dd _ngcontent-c6="" class="information__item"> 9ca3</dd>
-                            <dt _ngcontent-c6="" class="information__heading">Study PIN</dt>
-                            <dd _ngcontent-c6="" class="information__item"> 1167</dd>
-                        </dl>
-                    </div>
-
-                    <div class="page-content">
-
-                        <div class="content-full">
-                            <table class="data-table">
-                                <thead>
-                                    <tr>
-                                        <th>Subject ID</th>
-                                        <th>Fitbit Account Authorisation</th>
-                                        <th>Last Sync</th>
-                                        <th>Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><a class="data-table__link" href="#">Subject ID</a></td>
-                                        <td>Noat Authorised</td>
-                                        <td>-</td>
-                                        <td class="text-right">
-                                            <a href="#" class="button button--sm button--primary">Action</a>
-                                            <button class="button button--sm button--secondary">Other Action</button>
-                                            <button class="button button--sm button--destructive">Boom</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Subject ID</a></td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td><button class="button button--sm button--primary">Action</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Subject ID</a></td>
-                                        <td>-</td>
-                                        <td>-</td>
-                                        <td><button class="button button--sm button--primary">Action</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Subject ID</a></td>
-                                        <td>Authorised</td>
-                                        <td>[DD]/[MM]/[YYYY] at [HH:MM]</td>
-                                        <td><button class="button button--sm button--primary">Action</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Subject ID</a></td>
-                                        <td>Authorised</td>
-                                        <td>[DD]/[MM]/[YYYY] at [HH:MM]</td>
-                                        <td><button class="button button--sm button--primary">Action</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="#">Subject ID</a></td>
-                                        <td>Authorised</td>
-                                        <td>[DD]/[MM]/[YYYY] at [HH:MM]</td>
-                                        <td><button class="button button--sm button--primary">Action</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
-
-                    <div class="content-full">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
+                    <div class="content--full">
+                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel
+                            enim iaculis
                             aliquam
                             in eu
                             nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
@@ -207,60 +138,13 @@
                             viverra odio in tempor. Mauris eu sagittis arcu, eget vestibulum nibh.</p>
                     </div>
 
-                    <div class="content-half">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam
-                            in eu
-                            nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt
-                            dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo. Morbi non
-                            malesuada
-                            nunc, eu sodales eros. Proin a lorem faucibus, vestibulum sapien quis, vehicula nisi.
-                            Integer
-                            sagittis
-                            leo eu tellus porttitor accumsan non et justo. Donec placerat orci non arcu finibus
-                            ultricies.
-                            Orci
-                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sit
-                            amet
-                            justo
-                            varius, sodales tellus sit amet, dapibus nunc. Nam auctor placerat ullamcorper. Proin
-                            sollicitudin
-                            viverra odio in tempor. Mauris eu sagittis arcu, eget vestibulum nibh.</p>
-                    </div>
+                </div> <!-- / .page-content -->
 
-                    <div class="content-half">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam
-                            in eu
-                            nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt
-                            dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo. Morbi non
-                            malesuada
-                            nunc, eu sodales eros. Proin a lorem faucibus, vestibulum sapien quis, vehicula nisi.
-                            Integer
-                            sagittis
-                            leo eu tellus porttitor accumsan non et justo. Donec placerat orci non arcu finibus
-                            ultricies.
-                            Orci
-                            varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sit
-                            amet
-                            justo
-                            varius, sodales tellus sit amet, dapibus nunc. Nam auctor placerat ullamcorper. Proin
-                            sollicitudin
-                            viverra odio in tempor. Mauris eu sagittis arcu, eget vestibulum nibh.</p>
-                    </div>
+            </section> <!-- / .contentframe -->
 
-                    <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
-                    <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
-                    <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
-                    <div class="panel-style content-panel content-panel--lg"><img src="http://placehold.it/300x200" /></div>
+        </section> <!-- / .pagebody -->
 
-                </div>
-
-            </section>
-        </section>
-    </div>
+    </div> <!-- / .pageframe -->
 
 </body>
 
