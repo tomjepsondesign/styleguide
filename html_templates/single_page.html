@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title></title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../css/styleguide.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="sgl-column-frame">
+
+        <section class="top-navigation">
+
+            <div class="top-navigation__header">
+
+                <div class="top-navigation__logo">
+                    <img src="http://placehold.it/150x36" alt="Logo" />
+                </div>
+
+                <div class="top-navigation__menu" id="menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            </div>
+
+            <ul class="top-navigation__items">
+                <li class="top-navigation__item"><a href="#">Active Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+                <li class="top-navigation__item"><a href="#">Navigation Item</a></li>
+            </ul>
+
+        </section> <!-- / .top-navigation -->
+
+        <script>
+            $("#menu").click(function (event) {
+                $(".top-navigation__items").toggleClass('top-navigation__items--hidden');
+                // event.preventDefault();
+            }); 
+        </script>
+
+        <section class="sgl-column-content">
+
+            <section class="page-header">
+                <div class="page-breadcrumb">
+                    <ul class="page-breadcrumb__list">
+                        <li class="page-breadcrumb__item"><a class="link" href="index.html">Root</a></li>
+                        <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                        <li class="page-breadcrumb__item"><a class="link" href="#">Level 1</a></li>
+                        <li class="page-breadcrumb__item page-breadcrumb__separator"><i class="fas fa-chevron-right"></i></li>
+                        <li class="page-breadcrumb__item"><a class="link" href="#">Level 2</a></li>
+                    </ul>
+                </div>
+                <div class="page-heading">
+                    <h1 class="large-heading">{Subject ID}</h1>
+                </div>
+            </section>
+
+            <div class="page-content">
+                
+                <div class="content-full">
+                    <h1 class="large-heading">Full Width Content</h1>
+                </div>
+            
+                <div class="content--full">
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
+                        aliquam
+                        in eu
+                        nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
+                        tincidunt
+                        dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo. Morbi non
+                        malesuada
+                        nunc, eu sodales eros. Proin a lorem faucibus, vestibulum sapien quis, vehicula nisi.
+                        Integer
+                        sagittis
+                        leo eu tellus porttitor accumsan non et justo. Donec placerat orci non arcu finibus
+                        ultricies.
+                        Orci
+                        varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sit
+                        amet
+                        justo
+                        varius, sodales tellus sit amet, dapibus nunc. Nam auctor placerat ullamcorper. Proin
+                        sollicitudin
+                        viverra odio in tempor. Mauris eu sagittis arcu, eget vestibulum nibh.</p>
+                </div>
+
+            </div>            
+
+            <div class="page-content">
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+                <div class="panel-style content-panel--xs">
+                    <h1 class="content-heading">Xs Panel</h1>
+                    <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim
+                        iaculis aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc
+                        ornare. Donec laoreet tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla
+                        rutrum felis justo.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
