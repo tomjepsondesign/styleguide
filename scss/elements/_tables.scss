@@ -29,8 +29,20 @@
         white-space: nowrap;
     }
 
-    &__link {
+    a {
         color: inherit;
         @include link-states;
+    }
+}
+
+.pager {
+    background-color: transparent;
+    border-top: 1px solid $dark15;
+    margin-top: 20px;
+    padding-top: 20px;
+
+    &__label {
+        display: block;
+        padding-bottom: 10px;
     }
 }

@@ -119,6 +119,7 @@
 
 // .page-header is a nested wrapper to sit within a .wrapper <div>
 .page-header {
+    border-bottom: 1px solid $dark15;
     display: -ms-grid;
     display: grid;
     -ms-grid-column-span: 12;
@@ -130,6 +131,7 @@
         "breadcrumb breadcrummb"
         "heading action";
     margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .page-breadcrumb {
