@@ -10,6 +10,7 @@
 
 //Frame gives layout for the header + page
 .pageframe {
+    background-color: rgba($dark,0.01);
     display: grid;
     grid-template-columns: auto;
     grid-auto-rows: minmax(min-content, max-content);
@@ -44,6 +45,25 @@
     }
 }
 
+//Body gives layout for the sidebar + content
+.singlepage {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-areas: "content";
+    margin: 0 auto;
+    height: 100%;
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 85vw;
+    }
+
+    @media screen and (min-width: $lg) {
+        grid-template-columns: 75vw;
+    }     
+}
+
 //Page frame used to position the actual content inside it's grid cell
 .contentframe {
     grid-area: content;
@@ -51,33 +71,34 @@
     margin: 20px 20px 0 20px;
 }
 
+// DEPRECATED!!!
 // Provides grid layout for no-sidebar content
 // Add .page-content rows to add content areas
-.contentcolumn {
-    display: -ms-grid;
-    display: grid;
-    grid-area: body;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    -ms-grid-columns: (1fr)[12];
-    grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(min-content, max-content);
-    margin: 0 auto;
-    margin-top: 20px;
-    max-width: 90vw;  
-    width: 100%;
+// .contentcolumn {
+//     display: -ms-grid;
+//     display: grid;
+//     grid-area: body;
+//     grid-column-gap: 20px;
+//     grid-row-gap: 20px;
+//     -ms-grid-columns: (1fr)[12];
+//     grid-template-columns: repeat(12, 1fr);
+//     grid-auto-rows: minmax(min-content, max-content);
+//     margin: 0 auto;
+//     margin-top: 20px;
+//     max-width: 90vw;  
+//     width: 100%;
     
 
-    @media screen and (min-width: 788px) {
-        max-width: $med;  
-    }
-    @media screen and (min-width: 980px) {
-        max-width: 960px;
-    }        
-    @media screen and (min-width: 1220px) {
-        max-width: $lg;    
-    }                
-}
+//     @media screen and (min-width: 788px) {
+//         max-width: $med;  
+//     }
+//     @media screen and (min-width: 980px) {
+//         max-width: 960px;
+//     }        
+//     @media screen and (min-width: 1220px) {
+//         max-width: $lg;    
+//     }                
+// }
 
 // Layout grid for content
 // Can be used in the sidebar AND single-column layouts
