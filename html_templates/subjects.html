@@ -111,7 +111,7 @@
 
                         <div class="pager" id="pager">
                             <p class="copy pager__label"><span *ngIf="count">Showing {{ count }}</span><span *ngIf="total"> of {{ total }}</span></p>
-                            <button *ngIf="morePages" class="button button--sm button--primary center-block" (click)="onNextPressed()">Load More
+                            <button *ngIf="morePages" class="button button--sm button--primary" (click)="onNextPressed()">Load More
                                 <app-progress-dots [isLoading]="isLoading" isLight="true"></app-progress-dots>
                             </button>
                         </div>

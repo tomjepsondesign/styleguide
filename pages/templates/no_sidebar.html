@@ -59,7 +59,7 @@
 
         <div class="singlepage">
 
-            <section class="contentframe">
+            <div class="contentframe">
 
                 <section class="page-header">
                     <div class="page-breadcrumb">
@@ -73,88 +73,54 @@
                     </div>
                 </section>
 
-                <div class="page-content">
+                <section class="page-content">
                 
                     <div class="content--full">
                 
                         <div class="styleguide__content-grp">
                             <pre rel="html" class="snippet">
                                 <code class="snippet__copy">
-                                    &ltp class="copy"&gt&lt/p&gt
+    &ltbody&gt
+
+        &ltdiv class="pageframe"&gt
+
+            &ltsection class="top-navigation"&gt
+                &lt&nbsp;...&nbsp;&gt
+            &lt/section&gt
+            
+            &lt!-- This class differentiates between a single page or column page layout --&gt        
+            &ltdiv class="singlepage"&gt
+
+                &ltdiv class="contentframe"&gt
+
+                    &ltsection class="page-header"&gt
+                        &lt&nbsp;...&nbsp;&gt
+                    &lt/section&gt
+
+                    &ltdiv class="page-content"&gt
+                        &lt!-- .content--full and .content-panel--[x] can be added to create layouts within .page-content rows. --&gt
+                    &lt/div&gt
+
+                    &ltdiv class="page-content"&gt
+                        &lt!-- The rows can be stacked to create separate areas of content within a page. --&gt
+                    &lt/div&gt                    
+
+                &lt/div&gt
+                
+            &lt/div&gt
+
+        &lt/div&gt
+
+    &lt/body&gt
                                 </code>
                             </pre>                        
                         </div>
                 
                     </div>
                 
-                </div>
+                </section>
 
-                <div class="page-content">
-                
-                    <div class="content-full">
-                        <h1 class="large-heading">Small Panels</h1>
-                    </div>
-                
-                    <div class="panel-style content-panel--sm">
-                        <h1 class="content-heading">Sm Panel</h1>
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>
-                    </div>
-                
-                    <div class="panel-style content-panel--sm">
-                        <h1 class="content-heading">Sm Panel</h1>
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>
-                    </div>
-                
-                    <div class="panel-style content-panel--sm">
-                        <h1 class="content-heading">Sm Panel</h1>
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>
-                    </div>
-                
-                </div>
-                
-                <div class="page-content">
-                
-                    <div class="content-full">
-                        <h1 class="large-heading">X. Small Panels</h1>
-                    </div>
-                
-                    <div class="panel-style content-panel--xs">
-                        <h1 class="content-heading">Xs Panel</h1>
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>
-                    </div>
-                
-                    <div class="panel-style content-panel--xs">
-                        <h1 class="content-heading">Xs Panel</h1>
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>
-                    </div>
-                
-                    <div class="panel-style content-panel--xs">
-                        <h1 class="content-heading">Xs Panel</h1>
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>
-                    </div>
-                
-                    <div class="panel-style content-panel--xs">
-                        <h1 class="content-heading">Xs Panel</h1>
-                        <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non leo vel enim iaculis
-                            aliquam in eu nibh. Aliquam efficitur lectus eget massa elementum, ac maximus nunc ornare. Donec laoreet
-                            tincidunt dui et fermentum. Nunc pulvinar in ligula nec interdum. Nulla rutrum felis justo.</p>
-                    </div>
-                
-                </div>
-
-            </section>
+            </div>
 
         </div>
 

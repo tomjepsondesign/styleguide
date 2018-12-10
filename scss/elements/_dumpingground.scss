@@ -1,14 +1,16 @@
 .snippet {
+    box-sizing: border-box;
     background-color: $dark5;
     border: 1px solid $dark25;
     border-radius: 2px;
     margin-bottom: 8px;
     padding: 6px 5px 4px 5px;
+    width: 100%;
 
     @at-root #{&}__copy {
         color: $negative;
         font-family: 'Courier New', Courier, monospace;
-        font-weight: $bold;
+        font-weight: $regular;
     }
 }
 
@@ -31,7 +33,7 @@
 }
 
 pre, code {
-    white-space: normal;
+    //white-space: normal;
 }
 
 // Displays a heading/item list as rows in a panel

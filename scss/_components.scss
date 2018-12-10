@@ -1,6 +1,7 @@
 @import "elements/dumpingground";
 @import "elements/buttons";
 @import "elements/navigation";
+@import "elements/page-header";
 @import "elements/panels";
 @import "elements/tables";
 @import "elements/fields";
@@ -45,11 +46,11 @@
     }
 }
 
-//Body gives layout for the sidebar + content
+//Gives layout for the single column of content
 .singlepage {
     display: grid;
     grid-area: body;
-    grid-template-columns: 100%;
+    grid-template-columns: 100vw;
     grid-auto-rows: minmax(min-content, max-content);
     grid-template-areas: "content";
     margin: 0 auto;
@@ -71,35 +72,6 @@
     margin: 20px 20px 0 20px;
 }
 
-// DEPRECATED!!!
-// Provides grid layout for no-sidebar content
-// Add .page-content rows to add content areas
-// .contentcolumn {
-//     display: -ms-grid;
-//     display: grid;
-//     grid-area: body;
-//     grid-column-gap: 20px;
-//     grid-row-gap: 20px;
-//     -ms-grid-columns: (1fr)[12];
-//     grid-template-columns: repeat(12, 1fr);
-//     grid-auto-rows: minmax(min-content, max-content);
-//     margin: 0 auto;
-//     margin-top: 20px;
-//     max-width: 90vw;  
-//     width: 100%;
-    
-
-//     @media screen and (min-width: 788px) {
-//         max-width: $med;  
-//     }
-//     @media screen and (min-width: 980px) {
-//         max-width: 960px;
-//     }        
-//     @media screen and (min-width: 1220px) {
-//         max-width: $lg;    
-//     }                
-// }
-
 // Layout grid for content
 // Can be used in the sidebar AND single-column layouts
 .page-content {
@@ -113,67 +85,4 @@
         -ms-grid-column-span: 12;
     grid-column: span 12;
     margin-bottom: 20px;
-}
-
-// Standard areas for all pages
-
-// .page-header is a nested wrapper to sit within a .wrapper <div>
-.page-header {
-    border-bottom: 1px solid $dark15;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-column-span: 12;
-    grid-column: span 12; // Full width of .wrapper
-    grid-template-columns: 2fr 1fr;
-        -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-        "breadcrumb breadcrummb"
-        "heading action";
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-}
-
-.page-breadcrumb {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: breadcrumb;
-    margin-bottom: 40px;
-    &__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-    }
-    &__item {
-        -webkit-box-flex: 0;
-            -ms-flex: 0 1 auto;
-                flex: 0 1 auto;
-    }
-    &__separator {
-        color: $dark35;
-        font-size: 0.875rem;
-        line-height: 1.6875rem;
-        padding: 0 0.4375rem 0 0.5rem;
-    }
-}
-
-.page-heading {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: heading;
-}
-
-.page-action {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    grid-area: action;
-    -ms-grid-column-align: end;
-        justify-self: end;
 }

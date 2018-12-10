@@ -136,8 +136,10 @@ $navbreakpoint: 768px;
     
 
     @media screen and (min-width: 960px) {
+        border-bottom: none;
         border-right: 1px solid $dark35;
-        flex-direction: column;        
+        flex-direction: column;
+        overflow-x: hidden;               
     }    
 
     &__divider {
