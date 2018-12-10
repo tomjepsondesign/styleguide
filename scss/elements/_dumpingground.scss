@@ -4,12 +4,12 @@
     border: 1px solid $dark25;
     border-radius: 2px;
     margin-bottom: 8px;
-    padding: 6px 5px 4px 5px;
-    width: 100%;
+    padding: 10px;
+    //width: 100%;
 
     @at-root #{&}__copy {
         color: $negative;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: monospace;
         font-weight: $regular;
     }
 }
@@ -30,6 +30,10 @@
             margin-bottom: 0;
         }
     }
+}
+
+pre {
+    white-space: pre-wrap;
 }
 
 pre, code {

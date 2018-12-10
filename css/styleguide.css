@@ -232,12 +232,11 @@ img {
   border: 1px solid rgba(20, 25, 28, 0.25);
   border-radius: 2px;
   margin-bottom: 8px;
-  padding: 6px 5px 4px 5px;
-  width: 100%;
+  padding: 10px;
 }
 .snippet__copy {
   color: #BF0915;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: monospace;
   font-weight: 400;
 }
 
@@ -255,6 +254,10 @@ img {
 }
 .styleguide__content-grp:last-of-type {
   margin-bottom: 0;
+}
+
+pre {
+  white-space: pre-wrap;
 }
 
 .information {
