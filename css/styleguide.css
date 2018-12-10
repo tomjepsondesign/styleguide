@@ -1273,7 +1273,8 @@ input:checked + label {
   grid-row-gap: 20px;
   -ms-grid-columns: 1fr [12];
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(auto-fit);
+  grid-auto-rows: minmax(-webkit-min-content, -webkit-max-content);
+  grid-auto-rows: minmax(min-content, max-content);
   margin: 0 auto;
   margin-top: 20px;
   max-width: 90vw;

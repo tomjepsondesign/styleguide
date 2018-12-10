@@ -1,34 +1,330 @@
 <!doctype html>
 <html>
-    
+
 <head>
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    
-    <title></title>
-    
+
+    <title>Biotaware Styleguide</title>
+
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <link rel="stylesheet" href="css/styleguide.css" type="text/css" media="screen">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>        
+
 </head>
 
 <body>
 
-    <section>
-        <h1 class="content-heading">Template Links</h1>
-        <a class="link" href="html_templates/subjects.html">Subjects screen</a><br>
-        <a class="link" href="html_templates/individual_subject.html">Individual Subject screen</a><br>
-        <a class="link" href="html_templates/create_subjects.html">Create Subjects (Lightbox)</a><br>
-        <a class="link" href="html_templates/tabs.html">Tabs</a><br>
-        <a class="link" href="html_templates/buttons.html">Buttons</a><br>
-        <a class="link" href="html_templates/navigation.html">Navigation</a>
-        <hr>
-    </section>
+    <div class="pageframe">
+
+        <!-- .top-navigation is the primary navigation area on the standard dashboard layout -->
+        <section class="top-navigation">
+
+            <div class="top-navigation__header">
+
+                <div class="top-navigation__logo">
+                    <img src="http://placehold.it/150x36" alt="Logo" />
+                </div>
+
+                <div class="top-navigation__menu" id="menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            </div>
+
+            <ul class="top-navigation__items">
+                <li class="top-navigation__item top-navigation__item--active"><a href="index.html">Styles</a></li>
+                <li class="top-navigation__item"><a href="pages/templates.html">Templates</a></li>
+            </ul>
+
+        </section> <!-- / .top-navigation -->
+
+        <script>
+            $("#menu").click(function (event) {
+                $(".top-navigation__items").toggleClass('top-navigation__items--hidden');
+                // event.preventDefault();
+            }); 
+        </script>
+
+        <section class="pagebody">
+
+            <section class="sidebar">
+                <ul class="sidebar__items">
+                    <li class="sidebar__item"><a href="#typography">Typography</a></li>
+                    <li class="sidebar__item"><a href="#colours">Colours</a></li>
+                    <li class="sidebar__item"><a href="#buttons">Buttons</a></li>                    
+                </ul>
+
+                <div class="sidebar__divider"></div>
+
+            </section>
+
+            <section class="contentframe">
+
+                <!-- Typography -->
+                <!-- Colour -->
+                <!-- Buttons -->
+                <!-- Layout Structures -->
+                <!-- Panels -->
+                <!-- Tabs -->
+                <!-- Navigation Elements -->
+
+                <div class="page-content">
+
+                    <div class="content-full styleguide__heading" id="typography">
+                        <h1 class="large-heading">Typography</h1>
+                        <p class="copy styleguide__heading-content">In order to keep typographic classes as reusable as
+                            possible, there are no padding/margin attributes added. Either use a helper class if the
+                            element is standalone or, if the type is used within a repeating <span class="accent">block__element</span>
+                            pattern, use the spacing measures tied to the <span class="accent">__element</span> class.</p>
+                        <p class="sub-copy styleguide__heading-content">NB* This is a work in progress. Some classes
+                            may not yet be available.</p>
+                        <hr>
+                    </div>
+
+                    <h2 class="content-heading">Headings</h2>
+
+                    <div class="content-panel--full panel-style">
+                        <pre rel="html" class="snippet">
+                                    <code class="snippet__copy">
+                                        &lth1 class="large-heading"&gt&lt/h1&gt
+                                    </code>
+                                </pre>
+                        <h1 class="large-heading">Large Heading Style</h1>
+                    </div>
+
+                    <div class="content-panel--full panel-style">
+                        <pre rel="html" class="snippet">
+                            <code class="snippet__copy">
+                                &lth1 class="content-heading"&gt&lt/h1&gt
+                            </code>
+                        </pre>
+                        <h2 class="content-heading">Content heading style.</h2>
+                    </div>
+
+                    <h2 class="content-heading">Copy</h2>
+
+                    <div class="content-panel--full panel-style">
+
+                        <div class="styleguide__content-grp">
+                            <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &ltp class="copy"&gt&lt/p&gt
+                                        </code>
+                                    </pre>
+                            <p class="copy">ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžĂÂÊÔƠƯăâêôơư1234567890‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*</p>
+                        </div>
+
+                        <div class="styleguide__content-grp">
+                            <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &ltp class="accent"&gt&lt/p&gt
+                                        </code>
+                                    </pre>
+                            <p class="accent">ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžĂÂÊÔƠƯăâêôơư1234567890‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*</p>
+                        </div>
+
+                        <div class="styleguide__content-grp">
+                            <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &ltp class="accent accent--reverse"&gt&lt/p&gt
+                                        </code>
+                                    </pre>
+                            <p class="accent accent--reverse accent--reverse-bg">ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžĂÂÊÔƠƯăâêôơư1234567890‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*</p>
+                        </div>
+                        <div class="styleguide__content-grp">
+                            <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &ltp class="accent accent--colour"&gt&lt/p&gt
+                                        </code>
+                                    </pre>
+                            <p class="accent accent--colour">ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžĂÂÊÔƠƯăâêôơư1234567890‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*</p>
+                        </div>
+                        <div class="styleguide__content-grp">
+                            <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &ltp class="sub-copy"&gt&lt/p&gt
+                                        </code>
+                                    </pre>
+                            <p class="sub-copy">ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžĂÂÊÔƠƯăâêôơư1234567890‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*</p>
+                        </div>
+                        <div class="styleguide__content-grp">
+                            <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &ltp class="error-copy"&gt&lt/p&gt
+                                        </code>
+                                    </pre>
+                            <p class="error-copy">ABCČĆDĐEFGHIJKLMNOPQRSŠTUVWXYZŽabcčćdđefghijklmnopqrsštuvwxyzžĂÂÊÔƠƯăâêôơư1234567890‘?’“!”(%)[#]{@}/&\<-+÷×=>®©$€£¥¢:;,.*</p>
+                        </div>
+                    </div>
+
+                    <h2 class="content-heading">Links</h2>
+
+                    <div class="content-panel--full panel-style">
+                        <pre rel="html" class="snippet">
+                                    <code class="snippet__copy">
+                                            &ltp class="copy"&gt&lta class="link" href="#"&gt&lt/a&gt&lt/p&gt
+                                    </code>
+                                </pre>
+                        <p class="copy">A string of copy with <a class="link" href="#">a link to follow</a>.</p>
+                    </div>
+
+                    <div class="content-full styleguide__heading" id="colours">
+                        <h1 class="large-heading">Colours</h1>
+                        <hr>
+                    </div>
+
+                    <div class="content-full styleguide__heading" id="buttons">
+                        <h1 class="large-heading">Buttons</h1>
+                        <hr>
+                    </div>
+
+                    <div class="content-full">
+                        <h2 class="content-heading">Large Buttons</h2>
+                    </div>
+
+                    <div class="panel-style content-panel--full">
+
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                    <code class="snippet__copy">&lta class="button button--primary"&gt&lt/a&gt</code>
+                                </pre>
+                            <a class="button button--primary" href="#" target="">Primary Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--secondary"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--secondary" href="#" target="">Secondary Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--link"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--link" href="#" target="">Link Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--destructive"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--destructive" href="#" target="">Destructive Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--disabled"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--disabled" href="#">Disabled Button</a>
+                        </div>
+
+                    </div>
+
+                    <div class="content-full">
+                        <h2 class="content-heading">Small Buttons</h2>
+                    </div>
+
+                    <div class="panel-style content-panel--full">
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--sm button--primary"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--sm button--primary" href="#" target="">Primary Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--sm button--secondary"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--sm button--secondary" href="#" target="">Secondary Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--sm button--link"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--sm button--link" href="#" target="">Link Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--sm button--destructive"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--sm button--destructive" href="#" target="">Destructive Button</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">&lta class="button button--sm button--disabled"&gt&lt/a&gt</code>
+                                    </pre>
+                            <a class="button button--sm button--disabled" href="#">Disabled Button</a>
+                        </div>
+
+                    </div>
+
+                    <div class="content-full">
+                        <h2 class="content-heading">Pills</h2>
+                        <p class="copy">The chevrons used in the pills have a class of .pill__icon added to give space
+                            and movement on :hover.</p>
+                    </div>
+
+                    <div class="panel-style content-panel--full">
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &lta class="pill pill--primary" href="#" target=""&gt&lti class="pill__icon fas fa-chevron-right"&gt&lt/i&gt&lt/a&gt
+                                        </code>
+                                    </pre>                                 
+                            <a class="pill pill--primary" href="#" target="">Primary Pill<i class="pill__icon fas fa-chevron-right"></i></a>
+                        </div>
+                            <div class="styleguide__content-grp">                            
+                            <pre rel="html" class="snippet">
+                                    <code class="snippet__copy">&lta class="pill pill--primary"&gt&lt/a&gt</code>
+                                </pre>   
+                            <a class="pill pill--primary" href="#" target="">Primary Pill</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &lta class="pill pill--accent" href="#" target=""&gt&lti class="pill__icon fas fa-chevron-right"&gt&lt/i&gt&lt/a&gt
+                                        </code>
+                                    </pre>    
+                            <a class="pill pill--accent" href="#" target="">Accent Pill<i class="pill__icon fas fa-chevron-right"></i></a>
+                        </div>
+                            <div class="styleguide__content-grp">
+                                    <pre rel="html" class="snippet">
+                                            <code class="snippet__copy">&lta class="pill pill--accent"&gt&lt/a&gt</code>
+                                        </pre>                                                            
+                            <a class="pill pill--accent" href="#" target="">Accent Pill</a>
+                        </div>
+                        <div class="styleguide__content-grp">
+                                <pre rel="html" class="snippet">
+                                        <code class="snippet__copy">
+                                            &lta class="pill pill--subtle" href="#" target=""&gt&lti class="pill__icon fas fa-chevron-right"&gt&lt/i&gt&lt/a&gt
+                                        </code>
+                                    </pre>   
+                            <a class="pill pill--subtle" href="#" target="">Subtle Pill<i class="pill__icon fas fa-chevron-right"></i></a>
+                        </div>
+                            <div class="styleguide__content-grp">
+                            <pre rel="html" class="snippet">
+                                    <code class="snippet__copy">&lta class="pill pill--subtle"&gt&lt/a&gt</code>
+                                </pre>                               
+                            <a class="pill pill--subtle" href="#" target="">Subtle Pill</a>
+                        </div>
+
+                    </div>
+
+                </div> <!-- / .pagecontent -->
+            </section> <!-- / .contentframe -->
+        </section> <!-- / .pagebody -->
+    </div> <!-- / .pageframe -->
 
 </body>
+
 </html>

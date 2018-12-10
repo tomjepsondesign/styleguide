@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>Biotaware Styleguide</title>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="../css/styleguide.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-rdyFrfAIC05c5ph7BKz3l5NG5yEottvO/DQ0dCrwD8gzeQDjYBHNr1ucUpQuljos"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/regular.css" integrity="sha384-z3ccjLyn+akM2DtvRQCXJwvT5bGZsspS4uptQKNXNg778nyzvdMqiGcqHVGiAUyY"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-u5J7JghGz0qUrmEsWzBQkfvc8nK3fUT7DCaQzNQ+q4oEXhGSx+P2OqjWsfIRB8QT"
+        crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>        
+
+</head>
+
+<body>
+
+    <div class="pageframe">
+
+        <!-- .top-navigation is the primary navigation area on the standard dashboard layout -->
+        <section class="top-navigation">
+
+            <div class="top-navigation__header">
+
+                <div class="top-navigation__logo">
+                    <img src="http://placehold.it/150x36" alt="Logo" />
+                </div>
+
+                <div class="top-navigation__menu" id="menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+
+            </div>
+
+            <ul class="top-navigation__items">
+                <li class="top-navigation__item"><a href="../index.html">Styles</a></li>
+                <li class="top-navigation__item top-navigation__item--active"><a href="templates.html">Templates</a></li>
+            </ul>
+
+        </section> <!-- / .top-navigation -->
+
+        <script>
+            $("#menu").click(function (event) {
+                $(".top-navigation__items").toggleClass('top-navigation__items--hidden');
+                // event.preventDefault();
+            }); 
+        </script>
+
+        <section class="pagebody">
+
+            <section class="sidebar">
+                <ul class="sidebar__items">
+                    <li class="sidebar__item"><a href="templates/sidebar.html">Layout - Sidebar</a></li>
+                    <li class="sidebar__item"><a href="templates/no_sidebar.html">Layout - No Sidebar</a></li>                 
+                </ul>
+
+                <div class="sidebar__divider"></div>
+
+            </section>
+
+            <section class="contentframe">
+
+                <div class="page-content">
+
+                    <div class="content-full styleguide__heading" id="typography">
+                            <h1 class="large-heading">Templates</h1>
+                            <p class="copy styleguide__heading-content">Template markup / classes can be used to build out the frame for individual page types. The 'sidebar' layout is used primarily in the BiotaConnect dashboard where a nested content heirarchy is used. The 'no sidebar' layout is used within product/project specific instances of a BiotaConect build (eg. BiotaSense) where the product flow has been designed around a specific use case.</p>
+                    </div>                    
+
+                </div>
+
+            </section>
+        </section>
+    </div>
+
+</body>
+
+</html>
