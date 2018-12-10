@@ -48,30 +48,15 @@
 .contentframe {
     grid-area: content;
     margin: 0 auto;
-    //margin: 20px 20px 0 20px;    
+    margin: 20px 20px 0 20px;
 }
 
-//Single Column Layout
-
-//Frame gives layout for the header + page
-.sgl-column-frame {
-    display: grid;
-    grid-template-columns: auto;
-    grid-auto-rows: minmax(min-content, max-content);
-    @media screen and (min-width: 768px) {
-        grid-template-rows: 60px auto;
-    }
-    grid-template-areas:
-        "header"
-        "column";
-    height: 100%;
-}
-
-// Provides grid layout for content containers or .page-content rows
-.sgl-column-content {
+// Provides grid layout for no-sidebar content
+// Add .page-content rows to add content areas
+.contentcolumn {
     display: -ms-grid;
     display: grid;
-    grid-area: column;
+    grid-area: body;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     -ms-grid-columns: (1fr)[12];
