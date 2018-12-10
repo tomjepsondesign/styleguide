@@ -7,8 +7,6 @@
 @import "elements/tabs";
 
 // Sidebar layout
-// |        Header          |
-// | Sidebar |    Content   |
 
 //Frame gives layout for the header + page
 .pageframe {
@@ -49,11 +47,39 @@
 //Page frame used to position the actual content inside it's grid cell
 .contentframe {
     grid-area: content;
+    margin: 0 auto;
     margin: 20px 20px 0 20px;
-    //max-width: 1280px;
 }
 
-// Layout grid for the 'content' grid area
+// Provides grid layout for no-sidebar content
+// Add .page-content rows to add content areas
+.contentcolumn {
+    display: -ms-grid;
+    display: grid;
+    grid-area: body;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    -ms-grid-columns: (1fr)[12];
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(auto-fit);
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 90vw;  
+    width: 100%;
+
+    @media screen and (min-width: 788px) {
+        max-width: $med;  
+    }
+    @media screen and (min-width: 980px) {
+        max-width: 960px;
+    }        
+    @media screen and (min-width: 1220px) {
+        max-width: $lg;    
+    }                
+}
+
+// Layout grid for content
+// Can be used in the sidebar AND single-column layouts
 .page-content {
     display: -ms-grid;
     display: grid;
@@ -126,39 +152,4 @@
     grid-area: action;
     -ms-grid-column-align: end;
         justify-self: end;
-}
-
-// ************************************ //
-// ************************************ //
-// ************************************ //
-
-// Wrapper for all simple pages w/ no sidebar
-// Needs refactoring to include navigation
-
-.wrapper {
-    display: -ms-grid;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(auto-fit);
-    &--outer {
-        margin: 0 auto;
-        width: 100%;        
-        @media screen and (min-width: 788px) {
-            max-width: $med;  
-        }
-        @media screen and (min-width: 980px) {
-            max-width: 960px;
-        }        
-        @media screen and (min-width: 1220px) {
-            max-width: $lg;    
-        }                
-        padding-bottom: 40px;
-    }
-    &--inner {
-        -ms-grid-column-span: 12;
-        grid-column: span 12;    
-    }
 }
