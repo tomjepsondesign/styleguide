@@ -30,6 +30,16 @@
   }
 }
 
+@mixin sub-copy {
+    font-weight: $regular;
+    @include font-size(15px);
+    @include line-height(22px);
+    @media screen and (min-width: $lg) {
+        @include font-size(15px);
+        @include line-height(22px);
+    }
+}
+
 @mixin link-states {
     &:focus {
         color: $accent;

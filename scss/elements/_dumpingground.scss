@@ -81,6 +81,17 @@ pre, code {
     right: 5px;
 }
 
+// Error state used by the Angular portal
+.error-box {
+    @include sub-copy;
+    background-color: rgba($negative, 0.15);
+    border: 1px solid $negative;
+    border-radius: 2px;
+    color: $negative;
+    margin-top: 10px;
+    padding: 10px;
+}
+
 // Check before removing
 // Use new class in _panels.scss if making new layouts
 .content-half {
