@@ -135,15 +135,15 @@
     border-radius: 2px;
     color: $white;
     margin-bottom: 10px;
-    padding: 7px;
+    padding: 7px 7px 7px 28px;
     position: relative;
     @include font-size(15px);
     @include line-height(15px);
     &:after {
-        content: "\f057";
+        content: "\f06a";
         font-family: "FontAwesome";
         position: absolute;
-        right: 7px;
+        left: 7px;
         top: 7px;
         @include font-size(17px);
     }
