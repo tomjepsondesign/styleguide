@@ -1,0 +1,79 @@
+.large-heading {
+    font-weight: $regular;
+    letter-spacing: -1px;
+    text-shadow: 0px 1px 0px rgba($white,0.5);
+    @include font-size(39px);
+    @include line-height(59px);
+    @media screen and (min-width: $med) {
+        @include font-size(39px);
+        @include line-height(59px);
+    }
+    @media screen and (min-width: $lg) {
+        @include font-size(39px);
+        @include line-height(59px);
+    }
+}
+
+.content-heading {
+    @include font-size(21px);
+    @include line-height(31px);
+    font-weight: $bold;
+    @media screen and (min-width: $med) {
+        @include font-size(21px);
+        @include line-height(31px);
+    }
+}
+
+.copy { 
+    @include standard-font;
+    margin-bottom: 0.8125rem;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.accent {
+    @extend .copy;
+    font-weight: $bold;
+    // @include font-size(17px);
+    // @include line-height(27px);
+    @media screen and (min-width: $lg) {
+        // @include font-size(17px);
+        // @include line-height(27px);
+    }
+
+    &--reverse {
+        color: $white;
+        &-bg {
+            background-color: $primary;
+        }
+    }
+
+    &--colour {
+        color: $primary;
+    }    
+}
+
+.sub-copy {
+    color: $dark55;
+    font-weight: $regular;
+    @include font-size(15px);
+    @include line-height(22px);
+    @media screen and (min-width: $lg) {
+        @include font-size(15px);
+        @include line-height(22px);
+    }
+}
+
+.error-copy {
+    @include error-copy;
+}
+
+.link {
+    color: $dark;
+    font-family: $font-stack;
+    font-weight: $bold;
+    @include font-size(17px);
+    @include line-height(27px);
+    @include link-states;
+}

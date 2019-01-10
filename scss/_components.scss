@@ -1,0 +1,88 @@
+@import "elements/dumpingground";
+@import "elements/buttons";
+@import "elements/navigation";
+@import "elements/page-header";
+@import "elements/panels";
+@import "elements/tables";
+@import "elements/fields";
+@import "elements/tabs";
+
+// Sidebar layout
+
+//Frame gives layout for the header + page
+.pageframe {
+    background-color: rgba($dark,0.01);
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: minmax(min-content, max-content);
+    @media screen and (min-width: 768px) {
+        grid-template-rows: 60px auto;
+    }
+    grid-template-areas:
+        "header"
+        "body";
+    height: 100%;
+}
+
+//Body gives layout for the sidebar + content
+.pagebody {
+    background-color: rgba($dark,0.01);
+    display: grid;
+    grid-area: body;
+
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto;
+    grid-template-areas:
+    "sidebar"
+    "content";
+
+    height: 100%;
+
+    @media screen and (min-width: 960px) {
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "sidebar content";
+    }
+}
+
+//Gives layout for the single column of content
+.singlepage {
+    display: grid;
+    grid-area: body;
+    grid-template-columns: 100vw;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-areas: "content";
+    margin: 0 auto;
+    height: 100%;
+
+    @media screen and (min-width: 1024px) {
+        grid-template-columns: 85vw;
+    }
+
+    @media screen and (min-width: $lg) {
+        grid-template-columns: 75vw;
+    }     
+}
+
+//Page frame used to position the actual content inside it's grid cell
+.contentframe {
+    grid-area: content;
+    margin: 0 auto;
+    margin: 20px 20px 0 20px;
+}
+
+// Layout grid for content
+// Can be used in the sidebar AND single-column layouts
+.page-content {
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+        -ms-grid-columns: (1fr)[12];
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(auto-fit);
+        -ms-grid-column-span: 12;
+    grid-column: span 12;
+    margin-bottom: 20px;
+}

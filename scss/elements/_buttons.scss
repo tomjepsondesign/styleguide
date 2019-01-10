@@ -1,0 +1,169 @@
+// need to add a class for when <button> is used instead of <a> - the padding renders differently
+
+.button {
+    border-radius: 2px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-weight: $bold;
+    min-width: 120px;
+    padding: 10px 20px 10px 20px;        
+    text-decoration: none;
+    @include font-size(17px);
+    @include line-height(17px);
+
+    &--sm {
+        font-weight: $bold;
+        min-width: auto;
+        padding: 5px 10px 5px 10px;            
+        @include font-size(15px);
+        @include line-height(15px);
+    }
+
+    &--primary {
+        background-color: $primary;
+        border: 2px solid transparent;
+        color: $white;
+        transition:
+            background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $primaryDark;
+
+        }
+    }
+
+    &--secondary {
+        background-color: $white;
+        border: 2px solid $primary;
+        color: $primary;
+        transition:
+            border-color 0.1s ease-in-out,
+            color 0.1s ease-in-out;
+        &:hover {
+            border-color: $primaryDark;
+            color: $primaryDark;
+        }
+    }
+
+    &--link {
+        background-color: transparent;
+        border: 2px solid transparent;
+        color: $primary;
+        text-decoration: underline;
+        transition:
+            color 0.1s ease-in-out;
+        &:focus {
+            color: $accent;
+        }
+        &:hover {
+            color: $accent;
+        }
+        &:active {
+            color: $accentDark;
+        } 
+    }
+
+    &--destructive {
+        background-color: $negative;
+        border: 2px solid transparent;
+        color: $white;
+        transition:
+            background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $negativeDark;
+        }
+    }
+
+    &--disabled {
+        background-color: $dark25;
+        border: 2px solid transparent;
+        color: $dark25;
+        cursor: not-allowed;
+    }          
+}
+
+.pill {
+    display: inline-block;
+    box-sizing: border-box;
+    font-weight: $bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 25px;
+    padding: 5px 11px 5px 11px;        
+    @include font-size(14px);
+    @include line-height(14px);
+    &:hover .pill__icon {
+        left: 2px;
+    }
+
+    &__icon {        
+        bottom: 1px;
+        color: inherit;
+        font-size: 10px;
+        left: 0;
+        line-height: 10px;
+        padding-left: 0.5rem;
+        position: relative;
+        transition:
+            left 0.1s ease-in-out;             
+    }
+
+    &--primary {
+        background-color: $primary;
+        border: 2px solid transparent;
+        color: $white;
+        transition:
+            background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $primaryDark;
+
+        }
+    }
+
+    &--accent {
+        background-color: $accent;
+        border: 2px solid transparent;
+        color: $white;
+        transition:
+            background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $accentDark;
+
+        }
+    }    
+
+    &--subtle {
+        background-color: $dark35;
+        border: 2px solid transparent;
+        color: $white;
+        transition:
+            background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $dark55;
+
+        }
+    }  
+
+}
+
+//.action is used as a specific styling for buttons within a lightbox
+.action {
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-weight: $bold;
+    min-width: 120px;
+    padding: 11px 20px 9px 20px;
+    text-decoration: none;
+    font-family: $font-stack;
+    @include font-size(17px);
+    @include line-height(17px);
+    background-color: $primary;
+    border: 2px solid $primary;
+    color: $white;
+    transition:
+        background-color 0.1s ease-in-out,
+        border-color 0.1s ease-in-out;
+    &:hover {
+        background-color: $primaryDark;
+        border-color: $primaryDark;
+    }    
+}

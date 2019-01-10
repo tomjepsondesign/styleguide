@@ -1,0 +1,123 @@
+.snippet {
+    box-sizing: border-box;
+    background-color: $dark5;
+    border: 1px solid $dark25;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    padding: 10px;
+    //width: 100%;
+
+    @at-root #{&}__copy {
+        color: $negative;
+        font-family: monospace;
+        font-weight: $regular;
+    }
+}
+
+.styleguide {
+    &__heading {
+        margin-top: 40px;
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    &__heading-content {
+        padding-bottom: 10px;
+    }
+    &__content-grp {
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+pre, code {
+    //white-space: normal;
+}
+
+// Displays a heading/item list as rows in a panel
+// Use with DL-DT-DD or UL-LI as a preference
+
+.information {
+    @include standard-font;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    @media screen and (min-width: 525px) {
+        flex-direction: row;
+    }
+
+    &__heading {
+        flex: 1 1 auto;
+        font-weight: $bold;
+
+        @media screen and (min-width: 525px) {
+            flex: 1 1 40%;
+        }        
+    }
+    &__item {
+        flex: 1 1 auto;
+
+        @media screen and (min-width: 525px) {
+            flex: 1 1 60%;
+        }        
+    }
+}
+
+//
+.progressbar {
+    background-image: linear-gradient(-225deg, $primary 0,$accent 100%);
+    border-radius: 10px;
+    height: 5px;  
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+}
+
+// Error state used by the Angular portal
+.error-box {
+    @include sub-copy;
+    background-color: rgba($negative, 0.15);
+    border: 1px solid $negative;
+    border-radius: 2px;
+    color: $negative;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+// Check before removing
+// Use new class in _panels.scss if making new layouts
+.content-half {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+
+    @media screen and (min-width: 728px) {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;
+    }        
+
+    @media screen and (min-width: 960px) {
+        -ms-grid-column-span: 12;
+        grid-column: span 12;    
+    }
+    
+    @media screen and (min-width: 1024px) {
+        -ms-grid-column-span: 6;
+        grid-column: span 6;            
+    }
+}
+
+// Check before removing
+// Use new class in _panels.scss if making new layouts
+.content-full {
+    -ms-grid-column-span: 12;
+    grid-column: span 12;
+    overflow: auto;
+}

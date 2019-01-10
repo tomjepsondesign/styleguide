@@ -1,0 +1,98 @@
+.primary-bg {
+    background-color: $primary;
+}
+
+//CSS Grid for Colour Swatch Layout
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.colour-item {
+    &__1 {
+        background-color: $primary;
+        grid-column-start: 1;
+        grid-row-start: 1;        
+        grid-column-end: 2;
+        grid-row-end: 2;        
+    }
+    &__2 {
+        background-color: $primaryDark;
+        grid-column-start: 1;
+        grid-row-start: 2;        
+        grid-column-end: 2;
+        grid-row-end: 3;           
+    }
+    &__3 {
+        background-color: $accent;
+        grid-column-start: 2;
+        grid-row-start: 1;        
+        grid-column-end: 3;
+        grid-row-end: 2;          
+    }
+    &__4 {
+        background-color: $accentDark;
+        grid-column-start: 2;
+        grid-row-start: 2;        
+        grid-column-end: 3;
+        grid-row-end: 3;          
+    }
+    &__5 {
+        background-color: $negative;
+        grid-column-start: 3;
+        grid-row-start: 1;        
+        grid-column-end: 4;
+        grid-row-end: 2;          
+    }
+    &__6 {
+        background-color: $negativeDark;
+        grid-column-start: 3;
+        grid-row-start: 2;        
+        grid-column-end: 4;
+        grid-row-end: 3;          
+    }
+    &__7 {
+        background-color: $positive;
+        grid-column-start: 4;
+        grid-row-start: 1;        
+        grid-column-end: 5;
+        grid-row-end: 2;          
+    }
+    &__8 {
+        background-color: $positiveDark;
+        grid-column-start: 4;
+        grid-row-start: 2;        
+        grid-column-end: 5;
+        grid-row-end: 3;          
+    }
+    &__9 {
+        background-color: $dark;       
+    }
+    &__10 {
+        background-color: $dark55;       
+    }
+    &__11 {
+        background-color: $dark35;       
+    }
+    &__12 {
+        background-color: $dark25;       
+    }
+    &__13 {
+        background-color: $dark15;       
+    }
+    &__14 {
+        background-color: $dark5;       
+    }
+    &__15 {
+        background-color: $dark1;       
+        border: solid 1px $dark15;
+    }
+    &__16 {
+        background-color: $white;
+        border: solid 1px $dark15;   
+    }                               
+}
